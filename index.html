@@ -18,11 +18,11 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
             display: flex; flex-direction: column; align-items: center; text-align: center; 
         }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #eee; margin-bottom: 10px; }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #eee; margin-bottom: 10px; border: 1px solid #ddd; }
         .kniha-nazev { font-weight: bold; margin-bottom: 5px; font-size: 0.95rem; }
         .kniha-autor { color: #666; font-size: 0.85rem; margin-bottom: 10px; }
         .btn-koupit { 
-            margin-top: auto; background: #e67e22; color: white; 
+            margin-top: auto; background: #2c3e50; color: white; 
             padding: 5px 10px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; 
         }
     </style>
@@ -33,7 +33,6 @@
     <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
-        // Funkce pro načtení a zobrazení knih
         async function nactiKnihy() {
             try {
                 const response = await fetch('books.json');
@@ -48,18 +47,21 @@
             const box = document.getElementById('knihovna-box');
             
             for (const kniha of knihy) {
+                // Vytvoříme unikátní ID z názvu pro bezpečné párování obrázku
+                const uniqueId = btoa(unescape(encodeURIComponent(kniha.nazev + kniha.autor))).substring(0, 15);
+                
                 const karta = document.createElement('div');
                 karta.className = 'kniha-karta';
                 karta.innerHTML = `
-                    <img class="kniha-obalka" id="img-${kniha.isbn}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                    <img class="kniha-obalka" id="img-${uniqueId}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
                     <div class="kniha-nazev">${kniha.nazev}</div>
                     <div class="kniha-autor">${kniha.autor}</div>
                     <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
                 `;
                 box.appendChild(karta);
 
-                // Bezpečnostní pauza pro Google API (prevence 429 chyby)
-                await new Promise(resolve => setTimeout(resolve, 300));
+                // Pauza 1 sekunda mezi dotazy – nutné pro Google API, aby neblokovalo
+                await new Promise(resolve => setTimeout(resolve, 1000));
 
                 try {
                     const query = `${kniha.nazev} ${kniha.autor}`;
@@ -68,12 +70,12 @@
                     
                     if (data.items && data.items[0].volumeInfo.imageLinks) {
                         const imgUrl = data.items[0].volumeInfo.imageLinks.thumbnail.replace('http:', 'https:');
-                        document.getElementById(`img-${kniha.isbn}`).src = imgUrl;
+                        document.getElementById(`img-${uniqueId}`).src = imgUrl;
                     } else {
-                        document.getElementById(`img-${kniha.isbn}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
+                        document.getElementById(`img-${uniqueId}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
                     }
                 } catch (e) {
-                    console.error("Chyba API pro", kniha.nazev);
+                    console.error("Chyba API pro:", kniha.nazev);
                 }
             }
         }
