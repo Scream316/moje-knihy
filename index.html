@@ -2,55 +2,39 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Virtuální Knihovna</title>
+    <title>Moje Knihovna</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f7f6; padding: 20px; }
-        .knihovna-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-            gap: 20px; 
-            max-width: 1000px; 
-            margin: 0 auto; 
-        }
-        .kniha-karta { 
-            background: white; border-radius: 8px; padding: 15px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-            text-align: center;
-        }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: contain; margin-bottom: 10px; }
+        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
+        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-
-    <h1 style="text-align: center;">Moje Virtuální Knihovna</h1>
-    <main class="knihovna-grid" id="knihovna-box"></main>
+    <div class="knihovna-grid" id="knihovna-box"></div>
 
     <script>
         fetch('books.json')
-            .then(response => response.json())
+            .then(r => r.json())
             .then(knihy => {
                 const box = document.getElementById('knihovna-box');
-                
                 knihy.forEach(kniha => {
-                    const isbn = kniha.isbn.replace(/-/g, '');
-                    const karta = document.createElement('div');
-                    karta.className = 'kniha-karta';
+                    const div = document.createElement('div');
+                    div.className = 'kniha-karta';
                     
-                    // URL na obalkyknih.cz (vždy funkční, žádné API, žádné 429)
-                    const coverUrl = `https://www.obalkyknih.cz/view?isbn=${isbn}/cover`;
+                    // Zkusíme jiný formát URL, který je méně náchylný na "Connection closed"
+                    const isbn = kniha.isbn.replace(/-/g, '');
+                    const coverUrl = `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg?default=false`;
 
-                    karta.innerHTML = `
+                    div.innerHTML = `
                         <img class="kniha-obalka" 
                              src="${coverUrl}" 
-                             onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
-                        <div class="kniha-nazev"><b>${kniha.nazev}</b></div>
-                        <div class="kniha-autor">${kniha.autor}</div>
+                             onerror="this.onerror=null; this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
+                        <div><b>${kniha.nazev}</b></div>
                         <a href="${kniha.dobrovskyUrl}" target="_blank">Koupit</a>
                     `;
-                    box.appendChild(karta);
+                    box.appendChild(div);
                 });
-            })
-            .catch(err => console.error("Chyba načítání:", err));
+            });
     </script>
 </body>
 </html>
