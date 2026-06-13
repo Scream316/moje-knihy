@@ -2,21 +2,15 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Virtuální Knihovna</title>
+    <title>Moje Knihovna</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
+        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
         .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #ddd; margin-bottom: 10px; }
-        .kniha-nazev { font-weight: bold; margin-bottom: 5px; }
-        .kniha-autor { color: #666; margin-bottom: 10px; }
-        .btn-koupit { display: inline-block; padding: 5px 10px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: contain; margin-bottom: 10px; background: #f9f9f9; }
     </style>
 </head>
 <body>
-
-    <h1 style="text-align: center;">Moje Virtuální Knihovna</h1>
-    <main class="knihovna-grid" id="knihovna-box"></main>
+    <div class="knihovna-grid" id="knihovna-box"></div>
 
     <script>
         fetch('books.json')
@@ -27,19 +21,17 @@
                     const karta = document.createElement('div');
                     karta.className = 'kniha-karta';
                     
-                    const isbn = kniha.isbn ? kniha.isbn.replace(/-/g, '') : "";
-                    
-                    // PROXY SLUŽBA: images.weserv.nl 
-                    // Stáhne obrázek za nás a obejde ochranu "Connection closed"
-                    const coverUrl = isbn ? `https://images.weserv.nl/?url=https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg` : "";
+                    // Nyní hledáme podle názvu přes Google Image Search proxy
+                    // Tato služba bere název a najde první odpovídající obrázek
+                    const query = encodeURIComponent(kniha.nazev + " book cover");
+                    const coverUrl = `https://tse3.mm.bing.net/th?q=${query}&w=200&h=300&c=7&rs=1&p=0&o=5&pid=1.7`;
 
                     karta.innerHTML = `
                         <img class="kniha-obalka" 
                              src="${coverUrl}" 
                              onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
-                        <div class="kniha-nazev">${kniha.nazev}</div>
-                        <div class="kniha-autor">${kniha.autor}</div>
-                        <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
+                        <div class="kniha-nazev"><b>${kniha.nazev}</b></div>
+                        <a href="${kniha.dobrovskyUrl}" target="_blank">Koupit</a>
                     `;
                     box.appendChild(karta);
                 });
