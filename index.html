@@ -25,10 +25,6 @@
             margin-bottom: 40px;
         }
 
-        h1 {
-            color: var(--primary-color);
-        }
-
         .search-container {
             max-width: 500px;
             margin: 0 auto 30px auto;
@@ -40,13 +36,7 @@
             font-size: 16px;
             border: 2px solid #ddd;
             border-radius: 25px;
-            box-sizing: border-box;
             outline: none;
-            transition: border-color 0.3s;
-        }
-
-        #search-input:focus {
-            border-color: var(--primary-color);
         }
 
         .knihovna-grid {
@@ -66,12 +56,6 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .kniha-karta:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
 
         .kniha-obalka {
@@ -79,51 +63,13 @@
             height: 240px;
             object-fit: cover;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             background-color: #e9ecef;
             margin-bottom: 15px;
         }
 
-        .kniha-nazev {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin: 10px 0 5px 0;
-            color: var(--primary-color);
-            min-height: 2.2em;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .kniha-autor {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .kniha-isbn {
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 15px;
-        }
-
-        .btn-koupit {
-            margin-top: auto;
-            background-color: #e67e22;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: background-color 0.2s;
-            width: 80%;
-        }
-
-        .btn-koupit:hover {
-            background-color: #d35400;
-        }
+        .kniha-nazev { font-size: 1.1rem; font-weight: bold; margin: 10px 0 5px 0; color: var(--primary-color); }
+        .kniha-autor { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+        .btn-koupit { margin-top: auto; background-color: #e67e22; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -131,61 +77,48 @@
     <header>
         <h1>Moje Virtuální Knihovna</h1>
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Hledat podle názvu, autora nebo ISBN...">
+            <input type="text" id="search-input" placeholder="Hledat...">
         </div>
     </header>
 
-    <main class="knihovna-grid" id="knihovna-box">
-    </main>
+    <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
         let vsechnyKnihy = [];
 
-        // Načtení dat z books.json
         fetch('books.json')
             .then(response => response.json())
             .then(data => {
                 vsechnyKnihy = data;
                 zobrazKnihy(vsechnyKnihy);
             })
-            .catch(error => console.error('Chyba při načítání JSONu:', error));
+            .catch(error => console.error('Chyba:', error));
 
         function zobrazKnihy(knihy) {
-            const knihovnaBox = document.getElementById('knihovna-box');
-            knihovnaBox.innerHTML = '';
-
+            const box = document.getElementById('knihovna-box');
+            box.innerHTML = '';
             knihy.forEach(kniha => {
                 const isbnCiste = kniha.isbn.replace(/-/g, '');
+                // Primární zdroj ObalkyKnih, fallback Google Books
                 const urlObalky = `https://toc.obalkyknih.cz/file/toc/${isbnCiste}/cover`;
 
                 const karta = document.createElement('div');
                 karta.className = 'kniha-karta';
-
                 karta.innerHTML = `
                     <img class="kniha-obalka" 
                          src="${urlObalky}" 
-                         alt="Obálka knihy ${kniha.nazev}"
-                         onerror="this.onerror=null; this.src='https://via.placeholder.com/160x240/e9ecef/6c757d?text=Bez+obálky';">
+                         onerror="this.onerror=null; this.src='https://books.google.com/books/content?vid=ISBN${isbnCiste}&printsec=frontcover&img=1&zoom=1';">
                     <div class="kniha-nazev">${kniha.nazev}</div>
                     <div class="kniha-autor">${kniha.autor}</div>
-                    <div class="kniha-isbn">ISBN: ${kniha.isbn}</div>
                     <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
                 `;
-
-                knihovnaBox.appendChild(karta);
+                box.appendChild(karta);
             });
         }
 
         document.getElementById('search-input').addEventListener('input', (e) => {
-            const hledanyText = e.target.value.toLowerCase().trim();
-            
-            const vyfiltrovaneKnihy = vsechnyKnihy.filter(kniha => {
-                return kniha.nazev.toLowerCase().includes(hledanyText) || 
-                       kniha.autor.toLowerCase().includes(hledanyText) || 
-                       kniha.isbn.replace(/-/g, '').includes(hledanyText.replace(/-/g, ''));
-            });
-
-            zobrazKnihy(vyfiltrovaneKnihy);
+            const val = e.target.value.toLowerCase();
+            zobrazKnihy(vsechnyKnihy.filter(k => k.nazev.toLowerCase().includes(val) || k.autor.toLowerCase().includes(val)));
         });
     </script>
 </body>
