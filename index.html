@@ -70,6 +70,7 @@
             <h1>📚 Moje knihy</h1>
             <p class="subtitle" id="bookCounter">Načítám seznam...</p>
             
+            <!-- Vyhledávání -->
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Hledat knihu nebo autora...">
             </div>
@@ -103,13 +104,18 @@
             const booksGrid = document.getElementById('booksGrid');
             
             if (booksToRender.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">🔍 Žádné odpovídající knihy nebyly nalezeny.</div>';
+                booksGrid.innerHTML = '<div class="empty-message">🔍 Žádné odpovídající knihy nebyly unimplemented nebyly nalezeny.</div>';
                 return;
             }
 
             let htmlGrid = '';
             for (const book of booksToRender) {
-                const coverUrl = book.obalkaUrl || FALLBACK_COVER;
+                // Úprava adresy kvůli obcházení blokování obrázků (hotlink protection)
+                let coverUrl = book.obalkaUrl || FALLBACK_COVER;
+                if (book.obalkaUrl && book.obalkaUrl.includes('knihydobrovsky.cz')) {
+                    coverUrl = `https://images.weserv.nl/?url=${encodeURIComponent(book.obalkaUrl)}`;
+                }
+
                 const authorText = book.autor === "Neznámý autor" ? "" : book.autor;
                 
                 htmlGrid += '<div class="book-card">';
