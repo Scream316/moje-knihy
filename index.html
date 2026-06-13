@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Open Graph metadata pro sdílení -->
     <meta property="og:title" content="Moje knihy - Seznam knih které chci koupit">
     <meta property="og:description" content="Seznam knih které si chci koupit, s odkazami na Dobrovského a náhledy obálek">
     <meta property="og:type" content="website">
@@ -61,6 +60,8 @@
             overflow: hidden;
             box-shadow: 0 3px 10px rgba(0,0,0,0.15);
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
         
         .book-card:hover {
@@ -70,13 +71,21 @@
         
         .book-cover {
             width: 100%;
-            height: 180px;
+            height: 240px; /* Mírně zvětšeno pro lepší poměr stran obálek */
             object-fit: cover;
             background: #f0f0f0;
         }
         
         .book-info {
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        
+        .book-details {
+            margin-bottom: 8px;
         }
         
         .book-title {
@@ -95,7 +104,6 @@
         .book-author {
             font-size: 0.7em;
             color: #666;
-            margin-bottom: 8px;
             line-height: 1.4;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -105,15 +113,17 @@
         }
         
         .book-link {
-            display: inline-block;
+            display: block;
+            text-align: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 5px 10px;
+            padding: 6px 10px;
             border-radius: 4px;
             text-decoration: none;
-            font-size: 0.7em;
+            font-size: 0.75em;
             font-weight: 500;
             transition: opacity 0.2s;
+            margin-top: auto;
         }
         
         .book-link:hover {
@@ -127,6 +137,7 @@
             padding: 35px;
             background: rgba(255,255,255,0.1);
             border-radius: 8px;
+            grid-column: 1 / -1;
         }
         
         @media (max-width: 768px) {
@@ -144,7 +155,7 @@
             }
             
             .book-cover {
-                height: 140px;
+                height: 190px;
             }
             
             .book-info {
@@ -160,8 +171,8 @@
             }
             
             .book-link {
-                font-size: 0.65em;
-                padding: 4px 8px;
+                font-size: 0.7em;
+                padding: 5px 8px;
             }
         }
     </style>
@@ -170,55 +181,98 @@
     <div class="container">
         <header>
             <h1>📚 Moje knihy</h1>
-            <p class="subtitle">Seznam knih které si chci koupit</p>
+            <p class="subtitle">Seznam knih, které si chci koupit</p>
         </header>
         
         <div id="booksGrid" class="books-grid">
-            <!-- Knihy se načtou sem -->
-        </div>
+            </div>
     </div>
     
     <script>
         const BOOKS_JSON_URL = './books.json';
+        const FALLBACK_COVER = 'https://via.placeholder.com/300x400/667eea/ffffff?text=Kniha';
         
+        // Načtení dat z lokálního JSON souboru
         async function loadBooks() {
             try {
                 const response = await fetch(BOOKS_JSON_URL);
                 const data = await response.json();
                 return data.knihy || [];
             } catch (error) {
-                console.error('Chyba při načtení knih:', error);
+                console.error('Chyba při načtení knih z JSONu:', error);
                 return [];
             }
         }
         
+        // Automatické dohledání obálky přes Google Books API
+        async function fetchGoogleCover(title, author) {
+            try {
+                const query = encodeURIComponent(`${title} ${author}`);
+                const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+                
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.items && data.items[0]?.volumeInfo?.imageLinks?.thumbnail) {
+                    const thumb = data.items[0].volumeInfo.imageLinks.thumbnail;
+                    // Google vrací staré http:// odkazy, převedeme na zabezpečené https://
+                    return thumb.replace(/^http:\/\//i, 'https://');
+                }
+            } catch (error) {
+                console.error(`Chyba při hledání obálky pro "${title}":`, error);
+            }
+            return null;
+        }
+        
+        // Hlavní funkce pro zpracování a zobrazení dat
         async function displayBooks() {
             const booksGrid = document.getElementById('booksGrid');
             const books = await loadBooks();
             
             if (books.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">📖 Zatím žádné knihy.</div>';
+                booksGrid.innerHTML = '<div class="empty-message">📖 Zatím žádné knihy v seznamu.</div>';
                 return;
             }
             
-            let html = '';
-            for (const book of books) {
-                const coverUrl = book.obalkaUrl || 'https://via.placeholder.com/300x400/667eea/ffffff?text=Book';
+            // Projdeme knihy a asynchronně pro každou připravíme správnou URL obálky
+            const bookPromises = books.map(async (book) => {
+                let coverUrl = book.obalkaUrl;
                 
-                html += '<div class="book-card">';
-                html += '<img src="' + coverUrl + '" alt="' + book.nazev + '" class="book-cover" onerror="this.src=\'https://via.placeholder.com/300x400/667eea/ffffff?text=Book\'">';
-                html += '<div class="book-info">';
-                html += '<h3 class="book-title">' + book.nazev + '</h3>';
-                html += '<p class="book-author">' + book.autor + '</p>';
-                if (book.dobrovskyUrl) {
-                    html += '<a href="' + book.dobrovskyUrl + '" class="book-link" target="_blank">Koupit</a>';
+                // Pokud v JSONu chybí odkaz na obálku, zkusíme Google Books
+                if (!coverUrl || coverUrl.trim() === "") {
+                    coverUrl = await fetchGoogleCover(book.nazev, book.autor);
                 }
-                html += '</div></div>';
-            }
+                
+                // Pokud Google nic nenašel, dáme jako záchranu placeholder
+                if (!coverUrl) {
+                    coverUrl = FALLBACK_COVER;
+                }
+                
+                // Vygenerujeme HTML pro konkrétní kartu
+                let bookHtml = '<div class="book-card">';
+                bookHtml += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'">`;
+                bookHtml += '<div class="book-info">';
+                bookHtml += '<div class="book-details">';
+                bookHtml += `<h3 class="book-title">${book.nazev}</h3>`;
+                bookHtml += `<p class="book-author">${book.autor}</p>`;
+                bookHtml += '</div>';
+                
+                if (book.dobrovskyUrl) {
+                    bookHtml += `<a href="${book.dobrovskyUrl}" class="book-link" target="_blank">Koupit</a>`;
+                }
+                
+                bookHtml += '</div></div>';
+                return bookHtml;
+            });
             
-            booksGrid.innerHTML = html;
+            // Počkáme, až se dokončí všechny dotazy na Google API
+            const htmlCards = await Promise.all(bookPromises);
+            
+            // Vložíme hotové karty do gridu
+            booksGrid.innerHTML = htmlCards.join('');
         }
         
+        // Spuštění aplikace po načtení stránky
         displayBooks();
     </script>
 </body>
