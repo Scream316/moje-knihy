@@ -2,15 +2,21 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Knihovna</title>
+    <title>Moje Virtuální Knihovna</title>
     <style>
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
+        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
         .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; margin-bottom: 10px; }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #ddd; margin-bottom: 10px; }
+        .kniha-nazev { font-weight: bold; margin-bottom: 5px; }
+        .kniha-autor { color: #666; margin-bottom: 10px; }
+        .btn-koupit { display: inline-block; padding: 5px 10px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
     </style>
 </head>
 <body>
-    <div class="knihovna-grid" id="knihovna-box"></div>
+
+    <h1 style="text-align: center;">Moje Virtuální Knihovna</h1>
+    <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
         fetch('books.json')
@@ -18,21 +24,24 @@
             .then(knihy => {
                 const box = document.getElementById('knihovna-box');
                 knihy.forEach(kniha => {
-                    const div = document.createElement('div');
-                    div.className = 'kniha-karta';
+                    const karta = document.createElement('div');
+                    karta.className = 'kniha-karta';
                     
-                    // Zkusíme jiný formát URL, který je méně náchylný na "Connection closed"
-                    const isbn = kniha.isbn.replace(/-/g, '');
-                    const coverUrl = `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg?default=false`;
+                    const isbn = kniha.isbn ? kniha.isbn.replace(/-/g, '') : "";
+                    
+                    // PROXY SLUŽBA: images.weserv.nl 
+                    // Stáhne obrázek za nás a obejde ochranu "Connection closed"
+                    const coverUrl = isbn ? `https://images.weserv.nl/?url=https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg` : "";
 
-                    div.innerHTML = `
+                    karta.innerHTML = `
                         <img class="kniha-obalka" 
                              src="${coverUrl}" 
-                             onerror="this.onerror=null; this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
-                        <div><b>${kniha.nazev}</b></div>
-                        <a href="${kniha.dobrovskyUrl}" target="_blank">Koupit</a>
+                             onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
+                        <div class="kniha-nazev">${kniha.nazev}</div>
+                        <div class="kniha-autor">${kniha.autor}</div>
+                        <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
                     `;
-                    box.appendChild(div);
+                    box.appendChild(karta);
                 });
             });
     </script>
