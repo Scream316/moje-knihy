@@ -3,57 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta property="og:title" content="Moje knihy - Seznam knih které chci koupit">
-    <meta property="og:description" content="Seznam knih které si chci koupit, s odkazami na Dobrovského a náhledy obálek">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500">
-    
     <title>Moje knihy</title>
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 15px 10px;
         }
+        .container { max-width: 1400px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 20px; padding: 5px; }
+        h1 { font-size: 1.8em; color: white; margin-bottom: 6px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { color: rgba(255,255,255,0.9); font-size: 0.9em; margin-bottom: 15px; }
         
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
+        /* Styl pro vyhledávací pole */
+        .search-container {
+            max-width: 400px;
+            margin: 0 auto 25px auto;
+            padding: 0 10px;
         }
-        
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 5px;
+        .search-input {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            outline: none;
+            transition: box-shadow 0.2s;
         }
-        
-        h1 {
-            font-size: 1.8em;
-            color: white;
-            margin-bottom: 6px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .search-input:focus {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.35);
         }
-        
-        .subtitle {
-            color: rgba(255,255,255,0.9);
-            font-size: 0.9em;
-        }
-        
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 12px;
-        }
-        
+
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
         .book-card {
             background: white;
             border-radius: 8px;
@@ -63,126 +47,20 @@
             display: flex;
             flex-direction: column;
         }
-        
-        .book-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-        }
-        
-        .cover-wrapper {
-            width: 100%;
-            height: 255px;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .book-cover {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Změna na contain, aby se obálky nedeformovaly a neořezávaly */
-            background: #f7fafc;
-        }
-        
-        .book-info {
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: space-between;
-        }
-        
-        .book-details {
-            margin-bottom: 8px;
-        }
-        
-        .book-title {
-            font-size: 0.85em;
-            color: #333;
-            margin-bottom: 4px;
-            font-weight: 600;
-            line-height: 1.35;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-        
-        .book-author {
-            font-size: 0.7em;
-            color: #666;
-            line-height: 1.4;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-        
-        .book-link {
-            display: block;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 7px 10px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.75em;
-            font-weight: 500;
-            transition: opacity 0.2s;
-            margin-top: auto;
-        }
-        
-        .book-link:hover {
-            opacity: 0.9;
-        }
-        
-        .empty-message {
-            text-align: center;
-            color: white;
-            font-size: 0.95em;
-            padding: 35px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            grid-column: 1 / -1;
-        }
+        .book-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.25); }
+        .cover-wrapper { width: 100%; height: 255px; background: #e2e8f0; }
+        .book-cover { width: 100%; height: 100%; object-fit: cover; }
+        .book-info { padding: 12px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .book-details { margin-bottom: 8px; }
+        .book-title { font-size: 0.85em; color: #333; margin-bottom: 4px; font-weight: 600; line-height: 1.35; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .book-author { font-size: 0.7em; color: #666; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .book-link { display: block; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 7px 10px; border-radius: 4px; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: opacity 0.2s; margin-top: auto; }
+        .book-link:hover { opacity: 0.9; }
+        .empty-message { text-align: center; color: white; font-size: 0.95em; padding: 35px; background: rgba(255,255,255,0.1); border-radius: 8px; grid-column: 1 / -1; }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.4em;
-            }
-            
-            .subtitle {
-                font-size: 0.85em;
-            }
-            
-            .books-grid {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 10px;
-            }
-            
-            .cover-wrapper {
-                height: 200px;
-            }
-            
-            .book-info {
-                padding: 8px;
-            }
-            
-            .book-title {
-                font-size: 0.75em;
-            }
-            
-            .book-author {
-                font-size: 0.65em;
-            }
-            
-            .book-link {
-                font-size: 0.7em;
-                padding: 5px 8px;
-            }
+            .books-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+            .cover-wrapper { height: 200px; }
         }
     </style>
 </head>
@@ -190,91 +68,77 @@
     <div class="container">
         <header>
             <h1>📚 Moje knihy</h1>
-            <p class="subtitle">Seznam knih, které si chci koupit</p>
-        </header>
-        
-        <div id="booksGrid" class="books-grid">
+            <p class="subtitle" id="bookCounter">Načítám seznam...</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Hledat knihu nebo autora...">
             </div>
+        </header>
+        <div id="booksGrid" class="books-grid"></div>
     </div>
-    
+
     <script>
         const BOOKS_JSON_URL = './books.json';
-        const FALLBACK_COVER = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&auto=format&fit=crop&q=60';
-        
+        const FALLBACK_COVER = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400';
+        let allBooks = []; // Zde budeme mít uložené úplně všechny knihy
+
         async function loadBooks() {
             try {
                 const response = await fetch(BOOKS_JSON_URL);
-                if (!response.ok) throw new Error('Nelze načíst JSON');
                 const data = await response.json();
-                return data.knihy || [];
-            } catch (error) {
-                console.error(error);
-                return [];
+                allBooks = data.knihy || [];
+                
+                // Aktualizujeme podnadpis s počtem knih
+                document.getElementById('bookCounter').innerText = `Celkem v seznamu přání: ${allBooks.length} knih`;
+                
+                // První vykreslení všech knih
+                renderBooks(allBooks);
+            } catch (e) {
+                console.error(e);
+                document.getElementById('booksGrid').innerHTML = '<div class="empty-message">❌ Chyba při načítání knih z JSONu.</div>';
             }
         }
-        
-        // Nová funkce: Vytáhne ID z odkazu Dobrovského a sestaví URL obrázku
-        function getDobrovskyCover(dobrovskyUrl) {
-            if (!dobrovskyUrl) return null;
-            
-            // Regulární výraz, který najde poslední blok čísel v URL adrese
-            const match = dobrovskyUrl.match(/(\d+)(?:\/)?$/);
-            
-            if (match && match[1]) {
-                const bookId = match[1];
-                // Knihy Dobrovský ukládají obrázky přesně v tomto formátu (m = medium velikost)
-                return `https://www.knihydobrovsky.cz/thumbs/book-detail-m/mod_eshop/produkty/${bookId}.jpg`;
-            }
-            return null;
-        }
-        
-        async function displayBooks() {
+
+        function renderBooks(booksToRender) {
             const booksGrid = document.getElementById('booksGrid');
-            const books = await loadBooks();
             
-            if (books.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">📖 Žádné knihy v seznamu.</div>';
+            if (booksToRender.length === 0) {
+                booksGrid.innerHTML = '<div class="empty-message">🔍 Žádné odpovídající knihy nebyly nalezeny.</div>';
                 return;
             }
-            
+
             let htmlGrid = '';
-            
-            for (const book of books) {
-                let coverUrl = book.obalkaUrl;
-                
-                // Pokud není obálka zadaná ručně, vytáhneme ji automaticky z odkazu Dobrovského
-                if (!coverUrl || coverUrl.trim() === "") {
-                    coverUrl = getDobrovskyCover(book.dobrovskyUrl);
-                }
-                
-                // Pokud selže i to, dáme záchranný Unsplash obrázek
-                if (!coverUrl) {
-                    coverUrl = FALLBACK_COVER;
-                }
+            for (const book of booksToRender) {
+                const coverUrl = book.obalkaUrl || FALLBACK_COVER;
+                const authorText = book.autor === "Neznámý autor" ? "" : book.autor;
                 
                 htmlGrid += '<div class="book-card">';
-                htmlGrid += '<div class="cover-wrapper">';
-                // Pokud by náhodou Dobrovský změnil strukturu a obrázek selhal, hodí se tam fallback fotka
-                htmlGrid += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'">`;
-                htmlGrid += '</div>';
-                
+                htmlGrid += `<div class="cover-wrapper"><img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'"></div>`;
                 htmlGrid += '<div class="book-info">';
-                htmlGrid += '<div class="book-details">';
-                htmlGrid += `<h3 class="book-title">${book.nazev}</h3>`;
-                htmlGrid += `<p class="book-author">${book.autor}</p>`;
-                htmlGrid += '</div>';
-                
+                htmlGrid += `<div class="book-details"><h3 class="book-title">${book.nazev}</h3><p class="book-author">${authorText}</p></div>`;
                 if (book.dobrovskyUrl) {
                     htmlGrid += `<a href="${book.dobrovskyUrl}" class="book-link" target="_blank">Koupit</a>`;
                 }
-                
                 htmlGrid += '</div></div>';
             }
-            
             booksGrid.innerHTML = htmlGrid;
         }
-        
-        displayBooks();
+
+        // Funkce pro filtrování seznamu při psaní do vyhledávače
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTxt = e.target.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            
+            const filtered = allBooks.filter(book => {
+                const nazevNormal = book.nazev.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                const autorNormal = book.autor.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                return nazevNormal.includes(searchTxt) || autorNormal.includes(searchTxt);
+            });
+            
+            renderBooks(filtered);
+        });
+
+        // Spuštění aplikace
+        loadBooks();
     </script>
 </body>
 </html>
