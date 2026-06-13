@@ -3,73 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Knihovna</title>
+    <title>Moje Virtuální Knihovna</title>
     <style>
         :root {
             --primary-color: #2c3e50;
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --text-color: #333333;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: #333; margin: 0; padding: 20px; }
+        header { text-align: center; margin-bottom: 30px; }
+        
+        .search-container { max-width: 500px; margin: 0 auto; }
+        #search-input { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 25px; outline: none; }
+
+        .knihovna-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 25px; 
+            max-width: 1200px; 
+            margin: 20px auto; 
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        .kniha-karta { 
+            background: white; border-radius: 10px; padding: 15px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            display: flex; flex-direction: column; align-items: center; text-align: center; 
         }
 
-        .search-container {
-            max-width: 500px;
-            margin: 0 auto 30px auto;
+        .kniha-obalka { 
+            width: 140px; height: 210px; object-fit: cover; 
+            border-radius: 4px; background: #eee; margin-bottom: 10px; 
         }
 
-        #search-input {
-            width: 100%;
-            padding: 12px 20px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 25px;
-            outline: none;
+        .kniha-nazev { font-weight: bold; margin: 5px 0; font-size: 1rem; }
+        .kniha-autor { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+        .btn-koupit { 
+            margin-top: auto; background: var(--accent-color); color: white; 
+            padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 0.85rem; 
         }
-
-        .knihovna-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .kniha-karta {
-            background: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .kniha-obalka {
-            width: 160px;
-            height: 240px;
-            object-fit: cover;
-            border-radius: 4px;
-            background-color: #e9ecef;
-            margin-bottom: 15px;
-        }
-
-        .kniha-nazev { font-size: 1.1rem; font-weight: bold; margin: 10px 0 5px 0; color: var(--primary-color); }
-        .kniha-autor { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
-        .btn-koupit { margin-top: auto; background-color: #e67e22; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -77,7 +49,7 @@
     <header>
         <h1>Moje Virtuální Knihovna</h1>
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Hledat...">
+            <input type="text" id="search-input" placeholder="Hledat podle názvu nebo autora...">
         </div>
     </header>
 
@@ -92,33 +64,49 @@
                 vsechnyKnihy = data;
                 zobrazKnihy(vsechnyKnihy);
             })
-            .catch(error => console.error('Chyba:', error));
+            .catch(error => console.error('Chyba při načítání JSON:', error));
 
         function zobrazKnihy(knihy) {
             const box = document.getElementById('knihovna-box');
             box.innerHTML = '';
+            
             knihy.forEach(kniha => {
                 const isbnCiste = kniha.isbn.replace(/-/g, '');
-                // Primární zdroj ObalkyKnih, fallback Google Books
-                const urlObalky = `https://toc.obalkyknih.cz/file/toc/${isbnCiste}/cover`;
-
+                
                 const karta = document.createElement('div');
                 karta.className = 'kniha-karta';
+                
+                const img = document.createElement('img');
+                img.className = 'kniha-obalka';
+                img.src = `https://toc.obalkyknih.cz/file/toc/${isbnCiste}/cover`;
+                
+                // Řetězová logika: Pokud 1. zdroj selže -> Google Books -> OpenLibrary -> Placeholder
+                img.onerror = function() {
+                    this.onerror = function() {
+                        this.onerror = function() {
+                            this.src = 'https://via.placeholder.com/160x240/e9ecef/6c757d?text=Bez+obálky';
+                        };
+                        this.src = `https://covers.openlibrary.org/b/isbn/${isbnCiste}-M.jpg`;
+                    };
+                    this.src = `https://books.google.com/books/content?vid=ISBN${isbnCiste}&printsec=frontcover&img=1&zoom=1`;
+                };
+
                 karta.innerHTML = `
-                    <img class="kniha-obalka" 
-                         src="${urlObalky}" 
-                         onerror="this.onerror=null; this.src='https://books.google.com/books/content?vid=ISBN${isbnCiste}&printsec=frontcover&img=1&zoom=1';">
                     <div class="kniha-nazev">${kniha.nazev}</div>
                     <div class="kniha-autor">${kniha.autor}</div>
                     <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
                 `;
+                karta.prepend(img);
                 box.appendChild(karta);
             });
         }
 
         document.getElementById('search-input').addEventListener('input', (e) => {
             const val = e.target.value.toLowerCase();
-            zobrazKnihy(vsechnyKnihy.filter(k => k.nazev.toLowerCase().includes(val) || k.autor.toLowerCase().includes(val)));
+            zobrazKnihy(vsechnyKnihy.filter(k => 
+                k.nazev.toLowerCase().includes(val) || 
+                k.autor.toLowerCase().includes(val)
+            ));
         });
     </script>
 </body>
