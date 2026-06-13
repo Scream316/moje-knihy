@@ -17,7 +17,6 @@
         h1 { font-size: 1.8em; color: white; margin-bottom: 6px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
         .subtitle { color: rgba(255,255,255,0.9); font-size: 0.9em; margin-bottom: 15px; }
         
-        /* Styl pro vyhledávací pole */
         .search-container {
             max-width: 400px;
             margin: 0 auto 25px auto;
@@ -70,7 +69,6 @@
             <h1>📚 Moje knihy</h1>
             <p class="subtitle" id="bookCounter">Načítám seznam...</p>
             
-            <!-- Vyhledávání -->
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Hledat knihu nebo autora...">
             </div>
@@ -80,8 +78,9 @@
 
     <script>
         const BOOKS_JSON_URL = './books.json';
+        // Jako fallback použijeme neutrální, hezkou šedou ikonu knihy
         const FALLBACK_COVER = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400';
-        let allBooks = []; // Zde budeme mít uložené úplně všechny knihy
+        let allBooks = []; 
 
         async function loadBooks() {
             try {
@@ -89,10 +88,7 @@
                 const data = await response.json();
                 allBooks = data.knihy || [];
                 
-                // Aktualizujeme podnadpis s počtem knih
                 document.getElementById('bookCounter').innerText = `Celkem v seznamu přání: ${allBooks.length} knih`;
-                
-                // První vykreslení všech knih
                 renderBooks(allBooks);
             } catch (e) {
                 console.error(e);
@@ -104,22 +100,22 @@
             const booksGrid = document.getElementById('booksGrid');
             
             if (booksToRender.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">🔍 Žádné odpovídající knihy nebyly unimplemented nebyly nalezeny.</div>';
+                booksGrid.innerHTML = '<div class="empty-message">🔍 Žádné odpovídající knihy nebyly nalezeny.</div>';
                 return;
             }
 
             let htmlGrid = '';
             for (const book of booksToRender) {
-                // Úprava adresy kvůli obcházení blokování obrázků (hotlink protection)
-                let coverUrl = book.obalkaUrl || FALLBACK_COVER;
-                if (book.obalkaUrl && book.obalkaUrl.includes('knihydobrovsky.cz')) {
-                    coverUrl = `https://images.weserv.nl/?url=${encodeURIComponent(book.obalkaUrl)}`;
-                }
+                // NOVÝ SYSTÉM: Hledáme stabilně v Open Library podle názvu knihy
+                // Tím kompletně obcházíme rozbité a zablokované servery Dobrovského
+                const cistyNazevZahedlani = encodeURIComponent(book.nazev);
+                const coverUrl = `https://covers.openlibrary.org/b/isbn/${cistyNazevZahedlani}-M.jpg?default=false`;
 
                 const authorText = book.autor === "Neznámý autor" ? "" : book.autor;
                 
                 htmlGrid += '<div class="book-card">';
-                htmlGrid += `<div class="cover-wrapper"><img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'"></div>`;
+                // Pokud Open Library knihu nemá, "onerror" okamžitě přepne na náhradní univerzální obálku
+                htmlGrid += `<div class="cover-wrapper"><img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'; this.onerror=null;"></div>`;
                 htmlGrid += '<div class="book-info">';
                 htmlGrid += `<div class="book-details"><h3 class="book-title">${book.nazev}</h3><p class="book-author">${authorText}</p></div>`;
                 if (book.dobrovskyUrl) {
@@ -130,7 +126,6 @@
             booksGrid.innerHTML = htmlGrid;
         }
 
-        // Funkce pro filtrování seznamu při psaní do vyhledávače
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const searchTxt = e.target.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
             
@@ -143,7 +138,6 @@
             renderBooks(filtered);
         });
 
-        // Spuštění aplikace
         loadBooks();
     </script>
 </body>
