@@ -2,51 +2,55 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Knihovna</title>
+    <title>Moje Virtuální Knihovna</title>
     <style>
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
-        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #eee; margin-bottom: 10px; }
+        body { font-family: sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .knihovna-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 20px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+        .kniha-karta { 
+            background: white; border-radius: 8px; padding: 15px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            text-align: center;
+        }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: contain; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <div class="knihovna-grid" id="knihovna-box"></div>
+
+    <h1 style="text-align: center;">Moje Virtuální Knihovna</h1>
+    <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
-        async function nactiKnihy() {
-            const response = await fetch('books.json');
-            const knihy = await response.json();
-            const box = document.getElementById('knihovna-box');
-
-            for (const kniha of knihy) {
-                const karta = document.createElement('div');
-                karta.className = 'kniha-karta';
-                karta.innerHTML = `
-                    <img class="kniha-obalka" id="img-${kniha.isbn}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
-                    <div class="kniha-nazev">${kniha.nazev}</div>
-                    <a href="${kniha.dobrovskyUrl}" target="_blank">Koupit</a>
-                `;
-                box.appendChild(karta);
-
-                // ZDE JE KLÍČ: Pauza 2 sekundy mezi každým dotazem, aby nás Google neblokoval
-                await new Promise(resolve => setTimeout(resolve, 2000));
-
-                try {
-                    // Hledáme podle ISBN, které už máš opravené
-                    const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${kniha.isbn.replace(/-/g, '')}&maxResults=1`);
-                    const data = await res.json();
+        fetch('books.json')
+            .then(response => response.json())
+            .then(knihy => {
+                const box = document.getElementById('knihovna-box');
+                
+                knihy.forEach(kniha => {
+                    const isbn = kniha.isbn.replace(/-/g, '');
+                    const karta = document.createElement('div');
+                    karta.className = 'kniha-karta';
                     
-                    if (data.items && data.items[0].volumeInfo.imageLinks) {
-                        document.getElementById(`img-${kniha.isbn}`).src = data.items[0].volumeInfo.imageLinks.thumbnail.replace('http:', 'https:');
-                    } else {
-                        document.getElementById(`img-${kniha.isbn}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
-                    }
-                } catch (e) {
-                    console.error("Chyba API:", e);
-                }
-            }
-        }
-        nactiKnihy();
+                    // URL na obalkyknih.cz (vždy funkční, žádné API, žádné 429)
+                    const coverUrl = `https://www.obalkyknih.cz/view?isbn=${isbn}/cover`;
+
+                    karta.innerHTML = `
+                        <img class="kniha-obalka" 
+                             src="${coverUrl}" 
+                             onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
+                        <div class="kniha-nazev"><b>${kniha.nazev}</b></div>
+                        <div class="kniha-autor">${kniha.autor}</div>
+                        <a href="${kniha.dobrovskyUrl}" target="_blank">Koupit</a>
+                    `;
+                    box.appendChild(karta);
+                });
+            })
+            .catch(err => console.error("Chyba načítání:", err));
     </script>
 </body>
 </html>
