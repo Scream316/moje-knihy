@@ -62,7 +62,6 @@
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
-            position: relative;
         }
         
         .book-card:hover {
@@ -70,41 +69,28 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.25);
         }
         
-        /* Obal pro obrázek, abychom mohli ukázat text na pozadí, pokud obrázek selže */
         .cover-wrapper {
             width: 100%;
-            height: 250px;
+            height: 255px;
             background: #e2e8f0;
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .cover-placeholder-text {
-            position: absolute;
-            font-size: 0.8em;
-            color: #718096;
-            z-index: 1;
         }
         
         .book-cover {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            position: relative;
-            z-index: 2; /* Obrázek překryje text na pozadí */
+            object-fit: contain; /* Změna na contain, aby se obálky nedeformovaly a neořezávaly */
+            background: #f7fafc;
         }
         
         .book-info {
-            padding: 10px;
+            padding: 12px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             justify-content: space-between;
-            z-index: 3;
         }
         
         .book-details {
@@ -140,7 +126,7 @@
             text-align: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 6px 10px;
+            padding: 7px 10px;
             border-radius: 4px;
             text-decoration: none;
             font-size: 0.75em;
@@ -213,7 +199,6 @@
     
     <script>
         const BOOKS_JSON_URL = './books.json';
-        // Záložní univerzální obálka
         const FALLBACK_COVER = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&auto=format&fit=crop&q=60';
         
         async function loadBooks() {
@@ -228,45 +213,19 @@
             }
         }
         
-        async function fetchGoogleCover(title, author) {
-            async function callApi(searchQuery) {
-                try {
-                    const query = encodeURIComponent(searchQuery);
-                    const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
-                    const response = await fetch(url);
-                    const data = await response.json();
-                    
-                    if (data.items && data.items[0]?.volumeInfo?.imageLinks?.thumbnail) {
-                        let thumb = data.items[0].volumeInfo.imageLinks.thumbnail;
-                        
-                        // 1. Oprava HTTP na HTTPS
-                        thumb = thumb.replace(/^http:\/\//i, 'https://');
-                        
-                        // 2. VYČIŠTĚNÍ URL: Odstraníme omezující parametry jako edge=curl atd.
-                        // Google API někdy vrací nefunkční modifikátory obrázků.
-                        let cleanUrl = thumb.split('&')[0]; 
-                        // Pokud čisté URL neobsahuje zoom, pro jistotu ho přidáme
-                        if (!cleanUrl.includes('zoom=')) {
-                            cleanUrl += '&zoom=1';
-                        }
-                        
-                        return cleanUrl;
-                    }
-                } catch (e) {
-                    console.error(e);
-                }
-                return null;
+        // Nová funkce: Vytáhne ID z odkazu Dobrovského a sestaví URL obrázku
+        function getDobrovskyCover(dobrovskyUrl) {
+            if (!dobrovskyUrl) return null;
+            
+            // Regulární výraz, který najde poslední blok čísel v URL adrese
+            const match = dobrovskyUrl.match(/(\d+)(?:\/)?$/);
+            
+            if (match && match[1]) {
+                const bookId = match[1];
+                // Knihy Dobrovský ukládají obrázky přesně v tomto formátu (m = medium velikost)
+                return `https://www.knihydobrovsky.cz/thumbs/book-detail-m/mod_eshop/produkty/${bookId}.jpg`;
             }
-
-            // Hledání: nejprve název + autor, pak jen název
-            let cover = await callApi(`${title} ${author}`);
-            if (!cover && author.includes(',')) {
-                cover = await callApi(`${title} ${author.split(',')[0].trim()}`);
-            }
-            if (!cover) {
-                cover = await callApi(title);
-            }
-            return cover;
+            return null;
         }
         
         async function displayBooks() {
@@ -278,40 +237,41 @@
                 return;
             }
             
-            const bookPromises = books.map(async (book) => {
+            let htmlGrid = '';
+            
+            for (const book of books) {
                 let coverUrl = book.obalkaUrl;
                 
+                // Pokud není obálka zadaná ručně, vytáhneme ji automaticky z odkazu Dobrovského
                 if (!coverUrl || coverUrl.trim() === "") {
-                    coverUrl = await fetchGoogleCover(book.nazev, book.autor);
+                    coverUrl = getDobrovskyCover(book.dobrovskyUrl);
                 }
                 
+                // Pokud selže i to, dáme záchranný Unsplash obrázek
                 if (!coverUrl) {
                     coverUrl = FALLBACK_COVER;
                 }
                 
-                let bookHtml = '<div class="book-card">';
-                // Přidali jsme obal (wrapper) a text na pozadí pro případ selhání obrázku
-                bookHtml += '<div class="cover-wrapper">';
-                bookHtml += '<span class="cover-placeholder-text">Načítám obálku...</span>';
-                bookHtml += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.style.display='none';">`;
-                bookHtml += '</div>';
+                htmlGrid += '<div class="book-card">';
+                htmlGrid += '<div class="cover-wrapper">';
+                // Pokud by náhodou Dobrovský změnil strukturu a obrázek selhal, hodí se tam fallback fotka
+                htmlGrid += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'">`;
+                htmlGrid += '</div>';
                 
-                bookHtml += '<div class="book-info">';
-                bookHtml += '<div class="book-details">';
-                bookHtml += `<h3 class="book-title">${book.nazev}</h3>`;
-                bookHtml += `<p class="book-author">${book.autor}</p>`;
-                bookHtml += '</div>';
+                htmlGrid += '<div class="book-info">';
+                htmlGrid += '<div class="book-details">';
+                htmlGrid += `<h3 class="book-title">${book.nazev}</h3>`;
+                htmlGrid += `<p class="book-author">${book.autor}</p>`;
+                htmlGrid += '</div>';
                 
                 if (book.dobrovskyUrl) {
-                    bookHtml += `<a href="${book.dobrovskyUrl}" class="book-link" target="_blank">Koupit</a>`;
+                    htmlGrid += `<a href="${book.dobrovskyUrl}" class="book-link" target="_blank">Koupit</a>`;
                 }
                 
-                bookHtml += '</div></div>';
-                return bookHtml;
-            });
+                htmlGrid += '</div></div>';
+            }
             
-            const htmlCards = await Promise.all(bookPromises);
-            booksGrid.innerHTML = htmlCards.join('');
+            booksGrid.innerHTML = htmlGrid;
         }
         
         displayBooks();
