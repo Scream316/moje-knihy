@@ -185,8 +185,29 @@
             const books = await loadBooks();
             
             if (books.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">📖 Zatím žádné knihy. Přidej první knihu do <code>books.json</code>!</div>';
+                booksGrid.innerHTML = '<div class="empty-message">📖 Zatím žádné knihy.</div>';
                 return;
             }
             
-            booksGrid.innerHTML 
+            let html = '';
+            for (const book of books) {
+                const coverUrl = book.obalkaUrl || 'https://via.placeholder.com/300x400/667eea/ffffff?text=Book';
+                
+                html += '<div class="book-card">';
+                html += '<img src="' + coverUrl + '" alt="' + book.nazev + '" class="book-cover" onerror="this.src=\'https://via.placeholder.com/300x400/667eea/ffffff?text=Book\'">';
+                html += '<div class="book-info">';
+                html += '<h3 class="book-title">' + book.nazev + '</h3>';
+                html += '<p class="book-author">' + book.autor + '</p>';
+                if (book.dobrovskyUrl) {
+                    html += '<a href="' + book.dobrovskyUrl + '" class="book-link" target="_blank">Koupit</a>';
+                }
+                html += '</div></div>';
+            }
+            
+            booksGrid.innerHTML = html;
+        }
+        
+        displayBooks();
+    </script>
+</body>
+</html>
