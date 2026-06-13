@@ -2,20 +2,42 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Knihovna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Virtuální Knihovna</title>
     <style>
-        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .kniha-obalka { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; background: #ddd; }
-        .kniha-nazev { font-weight: bold; margin: 10px 0 5px 0; }
-        .btn-koupit { display: inline-block; margin-top: 10px; color: blue; text-decoration: none; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8f9fa; padding: 20px; color: #333; }
+        h1 { text-align: center; color: #2c3e50; }
+        .knihovna-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 25px; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+        }
+        .kniha-karta { 
+            background: white; border-radius: 12px; padding: 15px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08); 
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            transition: transform 0.2s;
+        }
+        .kniha-karta:hover { transform: translateY(-5px); }
+        .kniha-obalka { 
+            width: 140px; height: 210px; object-fit: cover; 
+            background: #eee; border-radius: 4px; margin-bottom: 12px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .kniha-nazev { font-weight: bold; margin-bottom: 4px; font-size: 0.95rem; line-height: 1.2; }
+        .kniha-autor { color: #666; font-size: 0.85rem; margin-bottom: 12px; }
+        .btn-koupit { 
+            margin-top: auto; background: #2c3e50; color: white; 
+            padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <h1>Moje Virtuální Knihovna</h1>
-    <div class="knihovna-grid" id="knihovna-box"></div>
+    <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
         async function nactiKnihy() {
@@ -28,28 +50,26 @@
                     const div = document.createElement('div');
                     div.className = 'kniha-karta';
                     
-                    // Očištění ISBN (odstranění pomlček)
-                    const cisteIsbn = kniha.isbn ? kniha.isbn.replace(/-/g, '') : "";
-                    
-                    // Link na OpenLibrary (pokud není ISBN, zkusí to placeholder)
-                    const coverUrl = cisteIsbn ? 
-                        `https://covers.openlibrary.org/b/isbn/${cisteIsbn}-M.jpg` : 
-                        'https://via.placeholder.com/150x220?text=Bez+obálky';
+                    // Google Books Content Server - vyhledávání podle názvu
+                    // Toto není API dotaz, je to přímý odkaz na obrázek
+                    const nazevQuery = encodeURIComponent(kniha.nazev + " " + kniha.autor);
+                    const coverUrl = `https://books.google.com/books/content?q=${nazevQuery}&printsec=frontcover&img=1&zoom=1&source=gbs_api`;
 
                     div.innerHTML = `
                         <img src="${coverUrl}" class="kniha-obalka" 
-                             onerror="this.src='https://via.placeholder.com/150x220?text=Bez+obálky'">
+                             onerror="this.src='https://via.placeholder.com/140x210?text=Obálka+není'">
                         <div class="kniha-nazev">${kniha.nazev}</div>
-                        <div>${kniha.autor}</div>
-                        <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit u Dobrovského</a>
+                        <div class="kniha-autor">${kniha.autor}</div>
+                        <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
                     `;
                     box.appendChild(div);
                 });
-            } catch (e) {
-                document.body.innerHTML = "<h1>Chyba při načítání knihovny: " + e.message + "</h1>";
+            } catch (err) {
+                document.body.innerHTML = "<h1>Chyba při načítání dat. Zkontroluj soubor books.json.</h1>";
+                console.error(err);
             }
         }
-        
+
         nactiKnihy();
     </script>
 </body>
