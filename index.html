@@ -62,6 +62,7 @@
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
         
         .book-card:hover {
@@ -69,11 +70,32 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.25);
         }
         
-        .book-cover {
+        /* Obal pro obrázek, abychom mohli ukázat text na pozadí, pokud obrázek selže */
+        .cover-wrapper {
             width: 100%;
             height: 250px;
-            object-fit: cover;
             background: #e2e8f0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .cover-placeholder-text {
+            position: absolute;
+            font-size: 0.8em;
+            color: #718096;
+            z-index: 1;
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2; /* Obrázek překryje text na pozadí */
         }
         
         .book-info {
@@ -82,6 +104,7 @@
             flex-direction: column;
             flex-grow: 1;
             justify-content: space-between;
+            z-index: 3;
         }
         
         .book-details {
@@ -154,7 +177,7 @@
                 gap: 10px;
             }
             
-            .book-cover {
+            .cover-wrapper {
                 height: 200px;
             }
             
@@ -190,56 +213,60 @@
     
     <script>
         const BOOKS_JSON_URL = './books.json';
-        // Jako univerzální záchranu použijeme pěkný obecný obrázek knihy z Unsplash
+        // Záložní univerzální obálka
         const FALLBACK_COVER = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&auto=format&fit=crop&q=60';
         
         async function loadBooks() {
             try {
                 const response = await fetch(BOOKS_JSON_URL);
-                if (!response.ok) {
-                    throw new Error(`Nelze načíst soubor ${BOOKS_JSON_URL} (Status: ${response.status})`);
-                }
+                if (!response.ok) throw new Error('Nelze načíst JSON');
                 const data = await response.json();
                 return data.knihy || [];
             } catch (error) {
-                console.error('Chyba při načtení nebo zpracování JSONu:', error);
+                console.error(error);
                 return [];
             }
         }
         
         async function fetchGoogleCover(title, author) {
-            // Pomocná funkce pro samotné volání API
             async function callApi(searchQuery) {
-                const query = encodeURIComponent(searchQuery);
-                const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
-                const response = await fetch(url);
-                const data = await response.json();
-                if (data.items && data.items[0]?.volumeInfo?.imageLinks?.thumbnail) {
-                    return data.items[0].volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://');
+                try {
+                    const query = encodeURIComponent(searchQuery);
+                    const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    
+                    if (data.items && data.items[0]?.volumeInfo?.imageLinks?.thumbnail) {
+                        let thumb = data.items[0].volumeInfo.imageLinks.thumbnail;
+                        
+                        // 1. Oprava HTTP na HTTPS
+                        thumb = thumb.replace(/^http:\/\//i, 'https://');
+                        
+                        // 2. VYČIŠTĚNÍ URL: Odstraníme omezující parametry jako edge=curl atd.
+                        // Google API někdy vrací nefunkční modifikátory obrázků.
+                        let cleanUrl = thumb.split('&')[0]; 
+                        // Pokud čisté URL neobsahuje zoom, pro jistotu ho přidáme
+                        if (!cleanUrl.includes('zoom=')) {
+                            cleanUrl += '&zoom=1';
+                        }
+                        
+                        return cleanUrl;
+                    }
+                } catch (e) {
+                    console.error(e);
                 }
                 return null;
             }
 
-            try {
-                // Pokus 1: Vyhledat kompletní název + autor(i)
-                let cover = await callApi(`${title} ${author}`);
-                if (cover) return cover;
-
-                // Pokus 2: Pokud tam jsou dva autoři (např. Sanderson, Jordan), zkusíme jen prvního autora a název
-                if (author.includes(',')) {
-                    const firstAuthor = author.split(',')[0].trim();
-                    cover = await callApi(`${title} ${firstAuthor}`);
-                    if (cover) return cover;
-                }
-
-                // Pokus 3: Poslední záchrana – hledat pouze podle názvu knihy
-                cover = await callApi(title);
-                if (cover) return cover;
-
-            } catch (error) {
-                console.error(`Chyba při hledání obálky pro "${title}":`, error);
+            // Hledání: nejprve název + autor, pak jen název
+            let cover = await callApi(`${title} ${author}`);
+            if (!cover && author.includes(',')) {
+                cover = await callApi(`${title} ${author.split(',')[0].trim()}`);
             }
-            return null;
+            if (!cover) {
+                cover = await callApi(title);
+            }
+            return cover;
         }
         
         async function displayBooks() {
@@ -247,7 +274,7 @@
             const books = await loadBooks();
             
             if (books.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">📖 Žádné knihy nebyly načteny. Zkontrolujte soubor books.json.</div>';
+                booksGrid.innerHTML = '<div class="empty-message">📖 Žádné knihy v seznamu.</div>';
                 return;
             }
             
@@ -263,7 +290,12 @@
                 }
                 
                 let bookHtml = '<div class="book-card">';
-                bookHtml += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'">`;
+                // Přidali jsme obal (wrapper) a text na pozadí pro případ selhání obrázku
+                bookHtml += '<div class="cover-wrapper">';
+                bookHtml += '<span class="cover-placeholder-text">Načítám obálku...</span>';
+                bookHtml += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.style.display='none';">`;
+                bookHtml += '</div>';
+                
                 bookHtml += '<div class="book-info">';
                 bookHtml += '<div class="book-details">';
                 bookHtml += `<h3 class="book-title">${book.nazev}</h3>`;
