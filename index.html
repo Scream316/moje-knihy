@@ -2,112 +2,44 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Virtuální Knihovna</title>
+    <title>Moje Knihovna</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #e67e22;
-            --bg-color: #f4f7f6;
-        }
-
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: #333; margin: 0; padding: 20px; }
-        header { text-align: center; margin-bottom: 30px; }
-        
-        .search-container { max-width: 500px; margin: 0 auto; }
-        #search-input { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 25px; outline: none; }
-
-        .knihovna-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-            gap: 25px; 
-            max-width: 1200px; 
-            margin: 20px auto; 
-        }
-
-        .kniha-karta { 
-            background: white; border-radius: 10px; padding: 15px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-            display: flex; flex-direction: column; align-items: center; text-align: center; 
-        }
-
-        .kniha-obalka { 
-            width: 140px; height: 210px; object-fit: cover; 
-            border-radius: 4px; background: #eee; margin-bottom: 10px; 
-        }
-
-        .kniha-nazev { font-weight: bold; margin: 5px 0; font-size: 1rem; }
-        .kniha-autor { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
-        .btn-koupit { 
-            margin-top: auto; background: var(--accent-color); color: white; 
-            padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 0.85rem; 
-        }
+        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px; padding: 20px; }
+        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Moje Virtuální Knihovna</h1>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Hledat podle názvu nebo autora...">
-        </div>
-    </header>
-
     <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
-        let vsechnyKnihy = [];
-
         fetch('books.json')
-            .then(response => response.json())
-            .then(data => {
-                vsechnyKnihy = data;
-                zobrazKnihy(vsechnyKnihy);
-            })
-            .catch(error => console.error('Chyba při načítání JSON:', error));
+            .then(r => r.json())
+            .then(knihy => {
+                const box = document.getElementById('knihovna-box');
+                knihy.forEach(kniha => {
+                    const karta = document.createElement('div');
+                    karta.className = 'kniha-karta';
+                    karta.innerHTML = `
+                        <img class="kniha-obalka" id="img-${kniha.isbn}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                        <div><b>${kniha.nazev}</b></div>
+                        <div>${kniha.autor}</div>
+                    `;
+                    box.appendChild(karta);
 
-        function zobrazKnihy(knihy) {
-            const box = document.getElementById('knihovna-box');
-            box.innerHTML = '';
-            
-            knihy.forEach(kniha => {
-                const isbnCiste = kniha.isbn.replace(/-/g, '');
-                
-                const karta = document.createElement('div');
-                karta.className = 'kniha-karta';
-                
-                const img = document.createElement('img');
-                img.className = 'kniha-obalka';
-                img.src = `https://toc.obalkyknih.cz/file/toc/${isbnCiste}/cover`;
-                
-                // Řetězová logika: Pokud 1. zdroj selže -> Google Books -> OpenLibrary -> Placeholder
-                img.onerror = function() {
-                    this.onerror = function() {
-                        this.onerror = function() {
-                            this.src = 'https://via.placeholder.com/160x240/e9ecef/6c757d?text=Bez+obálky';
-                        };
-                        this.src = `https://covers.openlibrary.org/b/isbn/${isbnCiste}-M.jpg`;
-                    };
-                    this.src = `https://books.google.com/books/content?vid=ISBN${isbnCiste}&printsec=frontcover&img=1&zoom=1`;
-                };
-
-                karta.innerHTML = `
-                    <div class="kniha-nazev">${kniha.nazev}</div>
-                    <div class="kniha-autor">${kniha.autor}</div>
-                    <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
-                `;
-                karta.prepend(img);
-                box.appendChild(karta);
+                    // Volání Google Books API
+                    const q = `${kniha.nazev} ${kniha.autor}`;
+                    fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1`)
+                        .then(r => r.json())
+                        .then(data => {
+                            if (data.items && data.items[0].volumeInfo.imageLinks) {
+                                document.getElementById(`img-${kniha.isbn}`).src = data.items[0].volumeInfo.imageLinks.thumbnail;
+                            } else {
+                                document.getElementById(`img-${kniha.isbn}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
+                            }
+                        });
+                });
             });
-        }
-
-        document.getElementById('search-input').addEventListener('input', (e) => {
-            const val = e.target.value.toLowerCase();
-            zobrazKnihy(vsechnyKnihy.filter(k => 
-                k.nazev.toLowerCase().includes(val) || 
-                k.autor.toLowerCase().includes(val)
-            ));
-        });
     </script>
 </body>
 </html>
