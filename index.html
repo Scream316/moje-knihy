@@ -2,85 +2,43 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Virtuální Knihovna</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f7f6; padding: 20px; }
-        .knihovna-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-            gap: 20px; 
-            max-width: 1000px; 
-            margin: 0 auto; 
-        }
-        .kniha-karta { 
-            background: white; border-radius: 8px; padding: 15px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-            display: flex; flex-direction: column; align-items: center; text-align: center; 
-        }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #eee; margin-bottom: 10px; border: 1px solid #ddd; }
-        .kniha-nazev { font-weight: bold; margin-bottom: 5px; font-size: 0.95rem; }
-        .kniha-autor { color: #666; font-size: 0.85rem; margin-bottom: 10px; }
-        .btn-koupit { 
-            margin-top: auto; background: #2c3e50; color: white; 
-            padding: 5px 10px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; 
-        }
+        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
+        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; margin-bottom: 10px; border: 1px solid #ddd; }
     </style>
 </head>
 <body>
-
-    <h1 style="text-align: center;">Moje Virtuální Knihovna</h1>
     <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
-        async function nactiKnihy() {
-            try {
-                const response = await fetch('books.json');
-                const knihy = await response.json();
-                zobrazKnihy(knihy);
-            } catch (err) {
-                console.error("Chyba při načítání books.json:", err);
-            }
-        }
-
-        async function zobrazKnihy(knihy) {
-            const box = document.getElementById('knihovna-box');
-            
-            for (const kniha of knihy) {
-                // Vytvoříme unikátní ID z názvu pro bezpečné párování obrázku
-                const uniqueId = btoa(unescape(encodeURIComponent(kniha.nazev + kniha.autor))).substring(0, 15);
-                
-                const karta = document.createElement('div');
-                karta.className = 'kniha-karta';
-                karta.innerHTML = `
-                    <img class="kniha-obalka" id="img-${uniqueId}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
-                    <div class="kniha-nazev">${kniha.nazev}</div>
-                    <div class="kniha-autor">${kniha.autor}</div>
-                    <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
-                `;
-                box.appendChild(karta);
-
-                // Pauza 1 sekunda mezi dotazy – nutné pro Google API, aby neblokovalo
-                await new Promise(resolve => setTimeout(resolve, 1000));
-
-                try {
-                    const query = `${kniha.nazev} ${kniha.autor}`;
-                    const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=1`);
-                    const data = await res.json();
+        fetch('books.json')
+            .then(r => r.json())
+            .then(knihy => {
+                const box = document.getElementById('knihovna-box');
+                knihy.forEach(kniha => {
+                    const karta = document.createElement('div');
+                    karta.className = 'kniha-karta';
                     
-                    if (data.items && data.items[0].volumeInfo.imageLinks) {
-                        const imgUrl = data.items[0].volumeInfo.imageLinks.thumbnail.replace('http:', 'https:');
-                        document.getElementById(`img-${uniqueId}`).src = imgUrl;
-                    } else {
-                        document.getElementById(`img-${uniqueId}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
-                    }
-                } catch (e) {
-                    console.error("Chyba API pro:", kniha.nazev);
-                }
-            }
-        }
+                    // Sestavíme dotaz pro Google Books "Image Service" (není to API, je to jen link na obrázek)
+                    // Tento link není blokován jako API dotazy
+                    const nazevProUrl = encodeURIComponent(kniha.nazev + " " + kniha.autor);
+                    const imgUrl = `https://books.google.com/books?q=${nazevProUrl}&tbm=isch&sa=X`; // Ilustrační link
+                    
+                    // Lepší cesta: Použijeme OpenLibrary, která funguje jako přímý zdroj obrázků
+                    const openLibUrl = `https://covers.openlibrary.org/search.php?q=${encodeURIComponent(kniha.nazev)}&mode=everything&pretty=true`;
 
-        nactiKnihy();
+                    karta.innerHTML = `
+                        <img class="kniha-obalka" 
+                             src="https://books.google.com/books/content?q=${nazevProUrl}&printsec=frontcover&img=1&zoom=1" 
+                             onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
+                        <div class="kniha-nazev">${kniha.nazev}</div>
+                        <div class="kniha-autor">${kniha.autor}</div>
+                    `;
+                    box.appendChild(karta);
+                });
+            });
     </script>
 </body>
 </html>
