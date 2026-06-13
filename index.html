@@ -2,44 +2,83 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Knihovna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Virtuální Knihovna</title>
     <style>
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px; padding: 20px; }
-        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; margin-bottom: 10px; }
+        body { font-family: sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .knihovna-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 20px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+        .kniha-karta { 
+            background: white; border-radius: 8px; padding: 15px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            display: flex; flex-direction: column; align-items: center; text-align: center; 
+        }
+        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; background: #eee; margin-bottom: 10px; }
+        .kniha-nazev { font-weight: bold; margin-bottom: 5px; font-size: 0.95rem; }
+        .kniha-autor { color: #666; font-size: 0.85rem; margin-bottom: 10px; }
+        .btn-koupit { 
+            margin-top: auto; background: #e67e22; color: white; 
+            padding: 5px 10px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; 
+        }
     </style>
 </head>
 <body>
+
+    <h1 style="text-align: center;">Moje Virtuální Knihovna</h1>
     <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
-        fetch('books.json')
-            .then(r => r.json())
-            .then(knihy => {
-                const box = document.getElementById('knihovna-box');
-                knihy.forEach(kniha => {
-                    const karta = document.createElement('div');
-                    karta.className = 'kniha-karta';
-                    karta.innerHTML = `
-                        <img class="kniha-obalka" id="img-${kniha.isbn}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
-                        <div><b>${kniha.nazev}</b></div>
-                        <div>${kniha.autor}</div>
-                    `;
-                    box.appendChild(karta);
+        // Funkce pro načtení a zobrazení knih
+        async function nactiKnihy() {
+            try {
+                const response = await fetch('books.json');
+                const knihy = await response.json();
+                zobrazKnihy(knihy);
+            } catch (err) {
+                console.error("Chyba při načítání books.json:", err);
+            }
+        }
 
-                    // Volání Google Books API
-                    const q = `${kniha.nazev} ${kniha.autor}`;
-                    fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1`)
-                        .then(r => r.json())
-                        .then(data => {
-                            if (data.items && data.items[0].volumeInfo.imageLinks) {
-                                document.getElementById(`img-${kniha.isbn}`).src = data.items[0].volumeInfo.imageLinks.thumbnail;
-                            } else {
-                                document.getElementById(`img-${kniha.isbn}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
-                            }
-                        });
-                });
-            });
+        async function zobrazKnihy(knihy) {
+            const box = document.getElementById('knihovna-box');
+            
+            for (const kniha of knihy) {
+                const karta = document.createElement('div');
+                karta.className = 'kniha-karta';
+                karta.innerHTML = `
+                    <img class="kniha-obalka" id="img-${kniha.isbn}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                    <div class="kniha-nazev">${kniha.nazev}</div>
+                    <div class="kniha-autor">${kniha.autor}</div>
+                    <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
+                `;
+                box.appendChild(karta);
+
+                // Bezpečnostní pauza pro Google API (prevence 429 chyby)
+                await new Promise(resolve => setTimeout(resolve, 300));
+
+                try {
+                    const query = `${kniha.nazev} ${kniha.autor}`;
+                    const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=1`);
+                    const data = await res.json();
+                    
+                    if (data.items && data.items[0].volumeInfo.imageLinks) {
+                        const imgUrl = data.items[0].volumeInfo.imageLinks.thumbnail.replace('http:', 'https:');
+                        document.getElementById(`img-${kniha.isbn}`).src = imgUrl;
+                    } else {
+                        document.getElementById(`img-${kniha.isbn}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
+                    }
+                } catch (e) {
+                    console.error("Chyba API pro", kniha.nazev);
+                }
+            }
+        }
+
+        nactiKnihy();
     </script>
 </body>
 </html>
