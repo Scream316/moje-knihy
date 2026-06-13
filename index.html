@@ -3,256 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje knihy</title>
+    <title>Moje Knihovna</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #2c3e50;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            min-height: 100vh;
-            padding: 20px 10px;
-            color: #fff;
-        }
-        .container { max-width: 1400px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 25px; padding: 5px; }
-        h1 { font-size: 2.2em; color: white; margin-bottom: 8px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .subtitle { color: #a0aec0; font-size: 1em; margin-bottom: 20px; }
-        
-        .search-container {
-            max-width: 450px;
-            margin: 0 auto 30px auto;
-            padding: 0 10px;
-        }
-        .search-input {
-            width: 100%;
-            padding: 14px 22px;
-            font-size: 1em;
-            border: none;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            outline: none;
-            background: #2d3748;
-            color: white;
-            border: 2px solid #4a5568;
-            transition: all 0.2s;
-        }
-        .search-input:focus {
-            border-color: #667eea;
-            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
         }
 
-        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
-        .book-card {
-            background: #2d3748;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #4a5568;
-        }
-        .book-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            border-color: #667eea;
-        }
-        
-        /* Obal pro vizuální obálku */
-        .cover-wrapper { 
-            width: 100%; 
-            height: 260px; 
-            position: relative;
-            background: #1a202c;
-            overflow: hidden;
-        }
-        
-        /* Stylová textová obálka (CSS Fallback), která se ukáže VŽDY, když selže obrázek */
-        .css-book-cover {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background: linear-gradient(135deg, #3c3b3f 0%, #605c3c 100%);
+        header {
             text-align: center;
-            z-index: 1;
-        }
-        .css-cover-title {
-            font-size: 0.95em;
-            font-weight: bold;
-            color: #fff;
-            line-height: 1.4;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-            margin-top: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-        }
-        .css-cover-badge {
-            font-size: 0.7em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: rgba(255,255,255,0.6);
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 10px;
+            margin-bottom: 40px;
         }
 
-        /* Skutečný obrázek - sedí nad CSS obálkou, pokud se načte */
-        .book-cover-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
+        h1 {
+            color: var(--primary-color);
         }
-        
-        .book-info { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; background: #2d3748; }
-        .book-details { margin-bottom: 10px; }
-        .book-title { font-size: 0.9em; color: #fff; margin-bottom: 5px; font-weight: 600; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-        .book-author { font-size: 0.75em; color: #a0aec0; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
-        
-        .book-link { 
-            display: block; 
-            text-align: center; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            color: white; 
-            padding: 8px 12px; 
-            border-radius: 5px; 
-            text-decoration: none; 
-            font-size: 0.8em; 
-            font-weight: 600; 
-            transition: opacity 0.2s; 
+
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .knihovna-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .kniha-karta {
+            background: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .kniha-karta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .kniha-obalka {
+            width: 160px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            background-color: #e9ecef;
+            margin-bottom: 15px;
+        }
+
+        .kniha-nazev {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+            color: var(--primary-color);
+            min-height: 2.2em;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .kniha-autor {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .kniha-isbn {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .btn-koupit {
             margin-top: auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+            width: 80%;
         }
-        .book-link:hover { opacity: 0.9; }
-        .empty-message { text-align: center; color: #a0aec0; font-size: 1em; padding: 5px; grid-column: 1 / -1; }
-        
-        @media (max-width: 768px) {
-            .books-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
-            .cover-wrapper { height: 210px; }
-            .css-book-cover { padding: 12px 8px; }
-            .css-cover-title { font-size: 0.8em; -webkit-line-clamp: 3; }
+
+        .btn-koupit:hover {
+            background-color: #d35400;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>📚 Moje knihovnička</h1>
-            <p class="subtitle" id="bookCounter">Načítám knihy...</p>
-            
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Hledat knihu nebo autora...">
-            </div>
-        </header>
-        <div id="booksGrid" class="books-grid"></div>
-    </div>
+
+    <header>
+        <h1>Moje Virtuální Knihovna</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Hledat podle názvu, autora nebo ISBN...">
+        </div>
+    </header>
+
+    <main class="knihovna-grid" id="knihovna-box">
+    </main>
 
     <script>
-        const BOOKS_JSON_URL = './books.json';
-        let allBooks = []; 
+        let vsechnyKnihy = [];
 
-        // Generátor pěkných barevných přechodů pro textové obálky, aby každá kniha vypadala jinak
-        function getRandomGradient(text) {
-            const gradients = [
-                'linear-gradient(135deg, #5c258d 0%, #4389a2 100%)',
-                'linear-gradient(135deg, #134e5e 0%, #71b280 100%)',
-                'linear-gradient(135deg, #darkkhaki 0%, #333333 100%)',
-                'linear-gradient(135deg, #41295a 0%, #2f0743 100%)',
-                'linear-gradient(135deg, #20002c 0%, #cbb4d4 100%)',
-                'linear-gradient(135deg, #159957 0%, #155799 100%)',
-                'linear-gradient(135deg, #000428 0%, #004e92 100%)',
-                'linear-gradient(135deg, #4b6cb7 0%, #182848 100%)'
-            ];
-            // Vybere přechod stabilně podle délky názvu, aby se barva neměnila při každém obnovení
-            const index = text.length % gradients.length;
-            return gradients[index];
-        }
+        // Načtení dat z books.json
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => {
+                vsechnyKnihy = data;
+                zobrazKnihy(vsechnyKnihy);
+            })
+            .catch(error => console.error('Chyba při načítání JSONu:', error));
 
-        async function loadBooks() {
-            try {
-                const response = await fetch(BOOKS_JSON_URL);
-                const data = await response.json();
-                allBooks = data.knihy || [];
-                
-                document.getElementById('bookCounter').innerText = `Celkem v seznamu přání: ${allBooks.length} knih`;
-                renderBooks(allBooks);
-            } catch (e) {
-                console.error(e);
-                document.getElementById('booksGrid').innerHTML = '<div class="empty-message">❌ Chyba při načítání knih z JSONu.</div>';
-            }
-        }
+        function zobrazKnihy(knihy) {
+            const knihovnaBox = document.getElementById('knihovna-box');
+            knihovnaBox.innerHTML = '';
 
-        function renderBooks(booksToRender) {
-            const booksGrid = document.getElementById('booksGrid');
-            
-            if (booksToRender.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">🔍 Žádné odpovídající knihy nebyly nalezeny.</div>';
-                return;
-            }
+            knihy.forEach(kniha => {
+                const isbnCiste = kniha.isbn.replace(/-/g, '');
+                const urlObalky = `https://toc.obalkyknih.cz/file/toc/${isbnCiste}/cover`;
 
-            let htmlGrid = '';
-            for (const book of booksToRender) {
-                const gradient = getRandomGradient(book.nazev);
-                const authorText = book.autor === "Neznámý autor" ? "" : book.autor;
-                
-                // POKUS O NÁVRAT K PROXY: Pokud adresa existuje, zkusíme ji načíst přes Weserv proxy
-                let imageUrl = "";
-                if (book.obalkaUrl) {
-                    imageUrl = `https://images.weserv.nl/?url=${encodeURIComponent(book.obalkaUrl)}&w=300&il`;
-                }
+                const karta = document.createElement('div');
+                karta.className = 'kniha-karta';
 
-                htmlGrid += '<div class="book-card">';
-                htmlGrid += '<div class="cover-wrapper">';
-                
-                // 1. VRSTVA (ZÁLOHOVÁ): Vygenerovaná CSS obálka, která funguje VŽDYCKY
-                htmlGrid += `<div class="css-book-cover" style="background: ${gradient};">`;
-                htmlGrid += `<div class="css-cover-title">${book.nazev}</div>`;
-                htmlGrid += `<div class="css-cover-badge">Kniha</div>`;
-                htmlGrid += '</div>';
-                
-                // 2. VRSTVA (HLAVNÍ): Obrázek. Pokud ho proxy nenačte, kód spustí 'onerror' a obrázek se prostě skryje. 
-                // Tím se pod ním okamžitě odhalí ta připravená barevná CSS obálka. Web nebude nikdy rozbitý.
-                if (imageUrl) {
-                    htmlGrid += `<img src="${imageUrl}" alt="${book.nazev}" class="book-cover-img" onerror="this.style.display='none';">`;
-                }
-                
-                htmlGrid += '</div>'; // konec cover-wrapper
-                
-                // Spodní info
-                htmlGrid += '<div class="book-info">';
-                htmlGrid += `<div class="book-details"><h3 class="book-title">${book.nazev}</h3><p class="book-author">${authorText}</p></div>`;
-                if (book.dobrovskyUrl) {
-                    htmlGrid += `<a href="${book.dobrovskyUrl}" class="book-link" target="_blank">Koupit</a>`;
-                }
-                htmlGrid += '</div></div>';
-            }
-            booksGrid.innerHTML = htmlGrid;
-        }
+                karta.innerHTML = `
+                    <img class="kniha-obalka" 
+                         src="${urlObalky}" 
+                         alt="Obálka knihy ${kniha.nazev}"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/160x240/e9ecef/6c757d?text=Bez+obálky';">
+                    <div class="kniha-nazev">${kniha.nazev}</div>
+                    <div class="kniha-autor">${kniha.autor}</div>
+                    <div class="kniha-isbn">ISBN: ${kniha.isbn}</div>
+                    <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
+                `;
 
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            const searchTxt = e.target.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-            
-            const filtered = allBooks.filter(book => {
-                const nazevNormal = book.nazev.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-                const autorNormal = book.autor.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-                return nazevNormal.includes(searchTxt) || autorNormal.includes(searchTxt);
+                knihovnaBox.appendChild(karta);
             });
-            
-            renderBooks(filtered);
-        });
+        }
 
-        loadBooks();
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const hledanyText = e.target.value.toLowerCase().trim();
+            
+            const vyfiltrovaneKnihy = vsechnyKnihy.filter(kniha => {
+                return kniha.nazev.toLowerCase().includes(hledanyText) || 
+                       kniha.autor.toLowerCase().includes(hledanyText) || 
+                       kniha.isbn.replace(/-/g, '').includes(hledanyText.replace(/-/g, ''));
+            });
+
+            zobrazKnihy(vyfiltrovaneKnihy);
+        });
     </script>
 </body>
 </html>
