@@ -1,44 +1,41 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Moje Virtuální Knihovna</title>
-    <style>
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
-        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: cover; margin-bottom: 10px; border: 1px solid #ddd; }
-    </style>
-</head>
-<body>
-    <main class="knihovna-grid" id="knihovna-box"></main>
+<script>
+    async function zobrazKnihy(knihy) {
+        const box = document.getElementById('knihovna-box');
+        
+        for (const kniha of knihy) {
+            const karta = document.createElement('div');
+            karta.className = 'kniha-karta';
+            
+            // Unikátní ID pro následné vložení obálky
+            const cardId = 'card-' + Math.random().toString(36).substr(2, 9);
+            karta.id = cardId;
+            
+            karta.innerHTML = `
+                <img class="kniha-obalka" src="https://via.placeholder.com/140x210?text=Hledám..." id="img-${cardId}">
+                <div class="kniha-nazev">${kniha.nazev}</div>
+                <div class="kniha-autor">${kniha.autor}</div>
+                <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit</a>
+            `;
+            box.appendChild(karta);
 
-    <script>
-        fetch('books.json')
-            .then(r => r.json())
-            .then(knihy => {
-                const box = document.getElementById('knihovna-box');
-                knihy.forEach(kniha => {
-                    const karta = document.createElement('div');
-                    karta.className = 'kniha-karta';
-                    
-                    // Sestavíme dotaz pro Google Books "Image Service" (není to API, je to jen link na obrázek)
-                    // Tento link není blokován jako API dotazy
-                    const nazevProUrl = encodeURIComponent(kniha.nazev + " " + kniha.autor);
-                    const imgUrl = `https://books.google.com/books?q=${nazevProUrl}&tbm=isch&sa=X`; // Ilustrační link
-                    
-                    // Lepší cesta: Použijeme OpenLibrary, která funguje jako přímý zdroj obrázků
-                    const openLibUrl = `https://covers.openlibrary.org/search.php?q=${encodeURIComponent(kniha.nazev)}&mode=everything&pretty=true`;
+            // Tady je klíč k úspěchu: Pomalé tempo
+            await new Promise(resolve => setTimeout(resolve, 1500));
 
-                    karta.innerHTML = `
-                        <img class="kniha-obalka" 
-                             src="https://books.google.com/books/content?q=${nazevProUrl}&printsec=frontcover&img=1&zoom=1" 
-                             onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
-                        <div class="kniha-nazev">${kniha.nazev}</div>
-                        <div class="kniha-autor">${kniha.autor}</div>
-                    `;
-                    box.appendChild(karta);
-                });
-            });
-    </script>
-</body>
-</html>
+            try {
+                // Vyhledávání podle názvu, nikoliv podle ISBN
+                const query = encodeURIComponent(`${kniha.nazev} ${kniha.autor}`);
+                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`);
+                const data = await response.json();
+                
+                if (data.items && data.items[0].volumeInfo.imageLinks) {
+                    const img = document.getElementById(`img-${cardId}`);
+                    img.src = data.items[0].volumeInfo.imageLinks.thumbnail.replace('http:', 'https:');
+                } else {
+                    document.getElementById(`img-${cardId}`).src = 'https://via.placeholder.com/140x210?text=Bez+obálky';
+                }
+            } catch (err) {
+                console.error("Chyba při fetch:", err);
+            }
+        }
+    }
+</script>
