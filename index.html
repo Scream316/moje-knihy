@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Moje Knihovna</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .kniha-obalka { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; background: #ddd; }
+        .kniha-nazev { font-weight: bold; margin: 10px 0 5px 0; }
+        .btn-koupit { display: inline-block; margin-top: 10px; color: blue; text-decoration: none; }
+    </style>
 </head>
 <body>
+
     <h1>Moje Virtuální Knihovna</h1>
-    <div id="knihovna-box"></div>
+    <div class="knihovna-grid" id="knihovna-box"></div>
 
     <script>
-        async function start() {
+        async function nactiKnihy() {
             try {
                 const response = await fetch('books.json');
-                if (!response.ok) throw new Error("Soubor nenalezen");
                 const knihy = await response.json();
-                
                 const box = document.getElementById('knihovna-box');
                 
-                for (const kniha of knihy) {
+                knihy.forEach(kniha => {
                     const div = document.createElement('div');
-                    div.style.marginBottom = "20px";
-                    div.style.border = "1px solid #ccc";
-                    div.innerHTML = `<h3>${kniha.nazev}</h3><p>${kniha.autor}</p>`;
+                    div.className = 'kniha-karta';
+                    
+                    // Očištění ISBN (odstranění pomlček)
+                    const cisteIsbn = kniha.isbn ? kniha.isbn.replace(/-/g, '') : "";
+                    
+                    // Link na OpenLibrary (pokud není ISBN, zkusí to placeholder)
+                    const coverUrl = cisteIsbn ? 
+                        `https://covers.openlibrary.org/b/isbn/${cisteIsbn}-M.jpg` : 
+                        'https://via.placeholder.com/150x220?text=Bez+obálky';
+
+                    div.innerHTML = `
+                        <img src="${coverUrl}" class="kniha-obalka" 
+                             onerror="this.src='https://via.placeholder.com/150x220?text=Bez+obálky'">
+                        <div class="kniha-nazev">${kniha.nazev}</div>
+                        <div>${kniha.autor}</div>
+                        <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-koupit">Koupit u Dobrovského</a>
+                    `;
                     box.appendChild(div);
-                }
+                });
             } catch (e) {
-                document.body.innerHTML = "<h1>Chyba: " + e.message + "</h1>";
+                document.body.innerHTML = "<h1>Chyba při načítání knihovny: " + e.message + "</h1>";
             }
         }
-        start();
+        
+        nactiKnihy();
     </script>
 </body>
 </html>
