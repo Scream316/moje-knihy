@@ -7,7 +7,7 @@
     <meta property="og:title" content="Moje knihy - Seznam knih které chci koupit">
     <meta property="og:description" content="Seznam knih které si chci koupit, s odkazami na Dobrovského a náhledy obálek">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://via.placeholder.com/300x400/667eea/ffffff?text=📚">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500">
     
     <title>Moje knihy</title>
     
@@ -71,9 +71,9 @@
         
         .book-cover {
             width: 100%;
-            height: 240px; /* Mírně zvětšeno pro lepší poměr stran obálek */
+            height: 250px;
             object-fit: cover;
-            background: #f0f0f0;
+            background: #e2e8f0;
         }
         
         .book-info {
@@ -155,7 +155,7 @@
             }
             
             .book-cover {
-                height: 190px;
+                height: 200px;
             }
             
             .book-info {
@@ -190,65 +190,78 @@
     
     <script>
         const BOOKS_JSON_URL = './books.json';
-        const FALLBACK_COVER = 'https://via.placeholder.com/300x400/667eea/ffffff?text=Kniha';
+        // Jako univerzální záchranu použijeme pěkný obecný obrázek knihy z Unsplash
+        const FALLBACK_COVER = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&auto=format&fit=crop&q=60';
         
-        // Načtení dat z lokálního JSON souboru
         async function loadBooks() {
             try {
                 const response = await fetch(BOOKS_JSON_URL);
+                if (!response.ok) {
+                    throw new Error(`Nelze načíst soubor ${BOOKS_JSON_URL} (Status: ${response.status})`);
+                }
                 const data = await response.json();
                 return data.knihy || [];
             } catch (error) {
-                console.error('Chyba při načtení knih z JSONu:', error);
+                console.error('Chyba při načtení nebo zpracování JSONu:', error);
                 return [];
             }
         }
         
-        // Automatické dohledání obálky přes Google Books API
         async function fetchGoogleCover(title, author) {
-            try {
-                const query = encodeURIComponent(`${title} ${author}`);
+            // Pomocná funkce pro samotné volání API
+            async function callApi(searchQuery) {
+                const query = encodeURIComponent(searchQuery);
                 const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
-                
                 const response = await fetch(url);
                 const data = await response.json();
-                
                 if (data.items && data.items[0]?.volumeInfo?.imageLinks?.thumbnail) {
-                    const thumb = data.items[0].volumeInfo.imageLinks.thumbnail;
-                    // Google vrací staré http:// odkazy, převedeme na zabezpečené https://
-                    return thumb.replace(/^http:\/\//i, 'https://');
+                    return data.items[0].volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://');
                 }
+                return null;
+            }
+
+            try {
+                // Pokus 1: Vyhledat kompletní název + autor(i)
+                let cover = await callApi(`${title} ${author}`);
+                if (cover) return cover;
+
+                // Pokus 2: Pokud tam jsou dva autoři (např. Sanderson, Jordan), zkusíme jen prvního autora a název
+                if (author.includes(',')) {
+                    const firstAuthor = author.split(',')[0].trim();
+                    cover = await callApi(`${title} ${firstAuthor}`);
+                    if (cover) return cover;
+                }
+
+                // Pokus 3: Poslední záchrana – hledat pouze podle názvu knihy
+                cover = await callApi(title);
+                if (cover) return cover;
+
             } catch (error) {
                 console.error(`Chyba při hledání obálky pro "${title}":`, error);
             }
             return null;
         }
         
-        // Hlavní funkce pro zpracování a zobrazení dat
         async function displayBooks() {
             const booksGrid = document.getElementById('booksGrid');
             const books = await loadBooks();
             
             if (books.length === 0) {
-                booksGrid.innerHTML = '<div class="empty-message">📖 Zatím žádné knihy v seznamu.</div>';
+                booksGrid.innerHTML = '<div class="empty-message">📖 Žádné knihy nebyly načteny. Zkontrolujte soubor books.json.</div>';
                 return;
             }
             
-            // Projdeme knihy a asynchronně pro každou připravíme správnou URL obálky
             const bookPromises = books.map(async (book) => {
                 let coverUrl = book.obalkaUrl;
                 
-                // Pokud v JSONu chybí odkaz na obálku, zkusíme Google Books
                 if (!coverUrl || coverUrl.trim() === "") {
                     coverUrl = await fetchGoogleCover(book.nazev, book.autor);
                 }
                 
-                // Pokud Google nic nenašel, dáme jako záchranu placeholder
                 if (!coverUrl) {
                     coverUrl = FALLBACK_COVER;
                 }
                 
-                // Vygenerujeme HTML pro konkrétní kartu
                 let bookHtml = '<div class="book-card">';
                 bookHtml += `<img src="${coverUrl}" alt="${book.nazev}" class="book-cover" onerror="this.src='${FALLBACK_COVER}'">`;
                 bookHtml += '<div class="book-info">';
@@ -265,14 +278,10 @@
                 return bookHtml;
             });
             
-            // Počkáme, až se dokončí všechny dotazy na Google API
             const htmlCards = await Promise.all(bookPromises);
-            
-            // Vložíme hotové karty do gridu
             booksGrid.innerHTML = htmlCards.join('');
         }
         
-        // Spuštění aplikace po načtení stránky
         displayBooks();
     </script>
 </body>
