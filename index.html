@@ -7,7 +7,6 @@
     <style>
         body { 
             font-family: 'Playfair Display', serif; 
-            /* Jemné fantasy pozadí s texturou pergamenu */
             background-color: #1a1a2e;
             background-image: radial-gradient(circle at 50% 50%, #2a2a4a 0%, #1a1a2e 100%);
             min-height: 100vh;
@@ -15,18 +14,29 @@
             color: #e0e0e0; 
         }
 
+        .header-box { text-align: center; margin-bottom: 50px; }
+
         h1 { 
             font-family: 'Cinzel', serif;
             font-size: 3.5rem;
-            text-align: center; 
-            color: #d4af37; /* Zlatá barva */
-            margin-bottom: 50px;
+            color: #d4af37;
+            margin: 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             letter-spacing: 3px;
-            border-bottom: 2px solid #d4af37;
+        }
+
+        /* Zdobný prvek pod nadpisem */
+        .decor { color: #d4af37; font-size: 1.5rem; margin: 10px 0; }
+        
+        #counter { 
+            font-size: 1.2rem; 
+            color: #aaa; 
+            font-style: italic;
+            border: 1px solid rgba(212, 175, 55, 0.3);
             display: inline-block;
-            width: 100%;
-            padding-bottom: 10px;
+            padding: 5px 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
         }
         
         .knihovna-grid { 
@@ -84,7 +94,12 @@
 </head>
 <body>
 
-    <h1>Wishlist</h1>
+    <div class="header-box">
+        <h1>Wishlist</h1>
+        <div class="decor">✧ ──── ♞ ──── ✧</div>
+        <div id="counter">Načítám poklady...</div>
+    </div>
+
     <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
@@ -92,6 +107,11 @@
             .then(r => r.json())
             .then(knihy => {
                 const box = document.getElementById('knihovna-box');
+                const counter = document.getElementById('counter');
+                
+                // Aktualizace počítadla
+                counter.innerText = `Počet knih v mé sbírce: ${knihy.length}`;
+
                 knihy.forEach(kniha => {
                     const karta = document.createElement('div');
                     karta.className = 'kniha-karta';
