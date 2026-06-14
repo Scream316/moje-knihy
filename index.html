@@ -2,15 +2,70 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Knihovna</title>
+    <title>Wishlist</title>
     <style>
-        .knihovna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px; }
-        .kniha-karta { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .kniha-obalka { width: 140px; height: 210px; object-fit: contain; margin-bottom: 10px; background: #f9f9f9; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f0f2f5; 
+            padding: 40px; 
+            color: #333; 
+        }
+        h1 { text-align: center; color: #1a1a1a; margin-bottom: 40px; }
+        
+        .knihovna-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        .kniha-karta { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Animace povyskočení */
+        .kniha-karta:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .kniha-obalka { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            margin-bottom: 15px; 
+            background: #f9f9f9;
+        }
+        
+        .kniha-nazev { font-weight: 700; font-size: 1.1em; margin-bottom: 5px; }
+        .kniha-autor { color: #666; margin-bottom: 15px; font-size: 0.9em; }
+        
+        .btn-dobrovsky { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            background-color: #27AE60; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            font-size: 0.85em;
+            transition: background 0.3s;
+        }
+        
+        .btn-dobrovsky:hover { background-color: #219150; }
     </style>
 </head>
 <body>
-    <div class="knihovna-grid" id="knihovna-box"></div>
+
+    <h1>Můj Wishlist</h1>
+    <main class="knihovna-grid" id="knihovna-box"></main>
 
     <script>
         fetch('books.json')
@@ -21,17 +76,16 @@
                     const karta = document.createElement('div');
                     karta.className = 'kniha-karta';
                     
-                    // Nyní hledáme podle názvu přes Google Image Search proxy
-                    // Tato služba bere název a najde první odpovídající obrázek
-                    const query = encodeURIComponent(kniha.nazev + " book cover");
-                    const coverUrl = `https://tse3.mm.bing.net/th?q=${query}&w=200&h=300&c=7&rs=1&p=0&o=5&pid=1.7`;
+                    const query = encodeURIComponent(kniha.nazev + " " + kniha.autor + " book cover");
+                    const coverUrl = `https://tse3.mm.bing.net/th?q=${query}&w=300&h=450&c=7&rs=1&p=0&o=5&pid=1.7`;
 
                     karta.innerHTML = `
                         <img class="kniha-obalka" 
                              src="${coverUrl}" 
-                             onerror="this.src='https://via.placeholder.com/140x210?text=Bez+obálky'">
-                        <div class="kniha-nazev"><b>${kniha.nazev}</b></div>
-                        <a href="${kniha.dobrovskyUrl}" target="_blank">Koupit</a>
+                             onerror="this.src='https://via.placeholder.com/200x300?text=Bez+obálky'">
+                        <div class="kniha-nazev">${kniha.nazev}</div>
+                        <div class="kniha-autor">${kniha.autor}</div>
+                        <a href="${kniha.dobrovskyUrl}" target="_blank" class="btn-dobrovsky">Dobrovský</a>
                     `;
                     box.appendChild(karta);
                 });
