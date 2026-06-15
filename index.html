@@ -12,7 +12,23 @@
             min-height: 100vh;
             padding: 40px; 
             color: #e0e0e0; 
+            position: relative;
         }
+
+        /* Nový dekorativní box v levém rohu */
+        .sidebar-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #d4af37;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .sidebar-box h3 { color: #d4af37; margin: 0 0 10px 0; font-family: 'Cinzel'; font-size: 1rem; }
+        .sidebar-box a { display: block; color: #fff; text-decoration: none; margin: 5px 0; font-size: 0.9rem; }
+        .sidebar-box a:hover { color: #d4af37; }
 
         .header-box { text-align: center; margin-bottom: 50px; }
 
@@ -25,18 +41,13 @@
             letter-spacing: 3px;
         }
 
-        /* Zdobný prvek pod nadpisem */
         .decor { color: #d4af37; font-size: 1.5rem; margin: 10px 0; }
         
         #counter { 
-            font-size: 1.2rem; 
-            color: #aaa; 
-            font-style: italic;
+            font-size: 1.2rem; color: #aaa; font-style: italic;
             border: 1px solid rgba(212, 175, 55, 0.3);
-            display: inline-block;
-            padding: 5px 20px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.03);
+            display: inline-block; padding: 5px 20px;
+            border-radius: 20px; background: rgba(255, 255, 255, 0.03);
         }
         
         .knihovna-grid { 
@@ -54,27 +65,24 @@
             border: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
             text-align: center;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.4s;
+            /* Flexbox nastavení */
+            display: flex;
+            flex-direction: column;
         }
 
-        .kniha-karta:hover { 
-            transform: translateY(-15px) scale(1.02); 
-            border-color: #d4af37;
-        }
+        .kniha-karta:hover { transform: translateY(-15px) scale(1.02); border-color: #d4af37; }
 
         .kniha-obalka { 
-            width: 100%; 
-            height: 250px; 
-            object-fit: cover; 
-            border-radius: 5px; 
-            margin-bottom: 15px; 
-            border: 2px solid #333;
+            width: 100%; height: 250px; object-fit: cover; 
+            border-radius: 5px; margin-bottom: 15px; border: 2px solid #333;
         }
         
         .kniha-nazev { font-size: 1.2em; margin-bottom: 5px; color: #fff; }
         .kniha-autor { color: #aaa; margin-bottom: 15px; font-style: italic; }
         
         .btn-dobrovsky { 
+            margin-top: auto; /* Tlačí tlačítko dolů */
             display: inline-block; 
             padding: 10px 25px; 
             background-color: #27AE60; 
@@ -86,13 +94,17 @@
             transition: all 0.3s;
         }
         
-        .btn-dobrovsky:hover { 
-            background-color: #1e8449;
-            box-shadow: 0 0 15px rgba(39, 174, 96, 0.6);
-        }
+        .btn-dobrovsky:hover { background-color: #1e8449; box-shadow: 0 0 15px rgba(39, 174, 96, 0.6); }
     </style>
 </head>
 <body>
+
+    <!-- Boxík v levém horním rohu -->
+    <div class="sidebar-box">
+        <h3>Kde jinde hledat</h3>
+        <a href="https://www.knihobot.cz" target="_blank">Knihobot</a>
+        <a href="https://trhknih.cz" target="_blank">Trh knih</a>
+    </div>
 
     <div class="header-box">
         <h1>Wishlist</h1>
@@ -108,8 +120,6 @@
             .then(knihy => {
                 const box = document.getElementById('knihovna-box');
                 const counter = document.getElementById('counter');
-                
-                // Aktualizace počítadla
                 counter.innerText = `Počet knih v mé sbírce: ${knihy.length}`;
 
                 knihy.forEach(kniha => {
