@@ -15,20 +15,37 @@
             position: relative;
         }
 
-        /* Nový dekorativní box v levém rohu */
+        /* Box pro vyhledávání */
         .sidebar-box {
             position: absolute;
             top: 20px;
             left: 20px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.08);
             border: 1px solid #d4af37;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 12px;
             text-align: center;
+            min-width: 180px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 10;
         }
-        .sidebar-box h3 { color: #d4af37; margin: 0 0 10px 0; font-family: 'Cinzel'; font-size: 1rem; }
-        .sidebar-box a { display: block; color: #fff; text-decoration: none; margin: 5px 0; font-size: 0.9rem; }
-        .sidebar-box a:hover { color: #d4af37; }
+        .sidebar-box h3 { 
+            color: #d4af37; 
+            margin: 0 0 12px 0; 
+            font-family: 'Cinzel'; 
+            font-size: 1.1rem; 
+            text-transform: uppercase;
+        }
+        .sidebar-box a { 
+            display: block; 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 10px 0; 
+            font-size: 1.1rem; 
+            padding: 8px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .sidebar-box a:hover { color: #d4af37; text-decoration: underline; }
 
         .header-box { text-align: center; margin-bottom: 50px; }
 
@@ -66,7 +83,6 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
             text-align: center;
             transition: transform 0.4s;
-            /* Flexbox nastavení */
             display: flex;
             flex-direction: column;
         }
@@ -78,11 +94,11 @@
             border-radius: 5px; margin-bottom: 15px; border: 2px solid #333;
         }
         
-        .kniha-nazev { font-size: 1.2em; margin-bottom: 5px; color: #fff; }
+        .kniha-nazev { font-size: 1.2em; margin-bottom: 5px; color: #fff; line-height: 1.3; }
         .kniha-autor { color: #aaa; margin-bottom: 15px; font-style: italic; }
         
         .btn-dobrovsky { 
-            margin-top: auto; /* Tlačí tlačítko dolů */
+            margin-top: auto;
             display: inline-block; 
             padding: 10px 25px; 
             background-color: #27AE60; 
@@ -95,11 +111,25 @@
         }
         
         .btn-dobrovsky:hover { background-color: #1e8449; box-shadow: 0 0 15px rgba(39, 174, 96, 0.6); }
+
+        /* Mobilní optimalizace */
+        @media (max-width: 768px) {
+            body { padding: 20px; }
+            .sidebar-box {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 40px;
+            }
+            h1 { font-size: 2.2rem; }
+            .knihovna-grid { gap: 20px; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Boxík v levém horním rohu -->
     <div class="sidebar-box">
         <h3>Kde jinde hledat</h3>
         <a href="https://www.knihobot.cz" target="_blank">Knihobot</a>
