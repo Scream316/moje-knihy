@@ -1,1532 +1,1717 @@
 [
   {
-    "nazev": "Skandar a zloděj jednorožců",
-    "autor": "A. F. Steadman",
-    "isbn": "978-80-275-1249-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skandar-a-zlodej-jednorozcu-410816110"
-  },
-  {
-    "nazev": "Skandar a přízračný jezdec",
-    "autor": "A. F. Steadman",
-    "isbn": "978-80-275-1559-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skandar-a-prizracny-jezdec-521607820"
-  },
-  {
-    "nazev": "Skandar a soutěže Chaosu",
-    "autor": "A. F. Steadman",
-    "isbn": "978-80-275-2143-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skandar-a-souteze-chaosu-704866704"
-  },
-  {
-    "nazev": "Alchymista (Tajemství nesmrtelného Nicholase Flamela 1)",
-    "autor": "Michael Scott",
-    "isbn": "978-80-242-5630-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/alchymista-tajemstvi-nesmrtelneho-nicolase-flamela-5423265"
-  },
-  {
-    "nazev": "Čaroděj (Tajemství nesmrtelného Nicholase Flamela 2)",
-    "autor": "Michael Scott",
-    "isbn": "978-80-242-4393-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/carodej-tajemstvi-nesmrtelneho-nicolase-flamela-598269"
-  },
-  {
-    "nazev": "Vědma (Tajemství nesmrtelného Nicholase Flamela 3)",
-    "autor": "Michael Scott",
-    "isbn": "9978-80-242-4332-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vedma-tajemstvi-nesmrtelneho-nicolase-flamela-596924"
-  },
-  {
-    "nazev": "Zaříkávač (Tajemství nesmrtelného Nicholase Flamela 4)",
-    "autor": "Michael Scott",
-    "isbn": "978-80-242-5382-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zarikavac-tajemstvi-nesmrtelneho-nicolase-flamela-675571"
-  },
-  {
-    "nazev": "Válečník (Tajemství nesmrtelného Nicholase Flamela 5)",
-    "autor": "Michael Scott",
-    "isbn": "978-80-242-5707-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/valecnik-21842164"
-  },
-  {
-    "nazev": "Kněžka (Tajemství nesmrtelného Nicholase Flamela 6)",
-    "autor": "Michael Scott",
-    "isbn": "978-80-242-3804-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/knezka-tajemstvi-nesmrtelneho-nicolase-flamela-82733"
-  },
-  {
-    "nazev": "Alex Verus 1: Předurčený",
-    "autor": "Benedict Jacka",
-    "isbn": "978-80-7594-053-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/predurceny-alex-verus-1-220935565"
-  },
-  {
-    "nazev": "Alex Verus 2: Prokletý",
-    "autor": "Benedict Jacka",
-    "isbn": "978-80-7594-057-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/proklety-233967329"
-  },
-  {
-    "nazev": "Alex Verus 3: Zmizelí",
-    "autor": "Benedict Jacka",
-    "isbn": "978-80-7594-079-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zmizeli-338711747"
-  },
-  {
-    "nazev": "Alex Verus 4: Vyvolený",
-    "autor": "Benedict Jacka",
-    "isbn": "978-80-7594-103-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyvoleny-alex-verus-4-430788844"
-  },
-  {
-    "nazev": "Alex Verus 5: Skrytý",
-    "autor": "Benedict Jacka",
-    "isbn": "978-80-7594-131-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skryty-alex-verus-5-530822644"
-  },
-  {
-    "nazev": "Alex Verus 6: Maskovaný",
-    "autor": "Benedict Jacka",
-    "isbn": "978-80-7594-167-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/maskovany-803016983"
-  },
-  {
-    "nazev": "Aurora povstává",
-    "autor": "Amie Kaufman, Jay Kristoff",
-    "isbn": "978-80-7661-039-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/aurora-povstava-270484959"
-  },
-  {
-    "nazev": "Aurora plane",
-    "autor": "Amie Kaufman, Jay Kristoff",
-    "isbn": "978-80-7661-343-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/aurora-plane-376448364"
-  },
-  {
-    "nazev": "Aurora hasne",
-    "autor": "Amie Kaufman, Jay Kristoff",
-    "isbn": "978-80-7661-604-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/aurora-hasne-473684286"
-  },
-  {
-    "nazev": "Letopisy dračích jezdců",
-    "autor": "Anne McCaffrey",
-    "isbn": "978-80-7633-080-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/letopisy-dracich-jezdcu-238977178"
-  },
-  {
-    "nazev": "Píseň oceli",
-    "autor": "Arkady Saulski",
-    "isbn": "978-80-7557-220-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/pisen-oceli-227844275"
-  },
-  {
-    "nazev": "Píseň severu",
-    "autor": "Arkady Saulski",
-    "isbn": "978-80-278-0012-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisen-severu-327753772"
-  },
-  {
-    "nazev": "Píseň války",
-    "autor": "Arkady Saulski",
-    "isbn": "978-80-278-0100-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisen-valky-501331052"
-  },
-  {
-    "nazev": "Konec dětství",
-    "autor": "Arthur C. Clarke",
-    "isbn": "978-80-257-3990-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/konec-detstvi-496498448"
-  },
-  {
-    "nazev": "Krev dvojčat: Kouzlo elfů",
-    "autor": "Bernhard Hennen",
-    "isbn": "978-80-277-0251-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krev-dvojcat-kouzlo-elfu-429727721"
-  },
-  {
-    "nazev": "Dům tajemných stínů",
-    "autor": "Bobby Peers",
-    "isbn": "978-80-277-0363-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dum-tajemnych-stinu-466344875"
-  },
-  {
-    "nazev": "My jsme legie (Bobiverse 1)",
+    "nazev": "My jsme legie",
     "autor": "Dennis E. Taylor",
-    "isbn": "978-80-257-4019-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/my-jsme-legie-my-jsme-bob-bobiverse-kniha-1-432832506"
-  },
-  {
-    "nazev": "Protože je nás mnoho (Bobiverse 2)",
-    "autor": "Dennis E. Taylor",
-    "isbn": "978-80-257-4142-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/protoze-je-nas-mnoho-bobiverse-kniha-2-466042045"
-  },
-  {
-    "nazev": "Všechny tyto světy (Bobiverse 3)",
-    "autor": "Dennis E. Taylor",
-    "isbn": "978-80-257-4302-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vsechny-tyto-svety-bobiverse-kniha-3-524675945"
-  },
-  {
-    "nazev": "Barevný svět (Světla Východu 1)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-2915-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/barevny-svet-214631"
-  },
-  {
-    "nazev": "Slova záření (Archiv Bouřné záře 2)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-4985-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/slova-zareni-archiv-bourne-zare-kniha-druha-682155"
-  },
-  {
-    "nazev": "Meč přísahy (Archiv Bouřné záře 3)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-6014-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-prisahy-archiv-bourne-zare-3-111100583"
-  },
-  {
-    "nazev": "Rytmus války (Archiv Bouřné záře 4)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-7512-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/rytmus-valky-archiv-bourne-zare-4-325350410"
-  },
-  {
-    "nazev": "Elantris",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-2408-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/elantris-22485"
-  },
-  {
-    "nazev": "Vyjednavač",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-3641-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyjednavac-534721"
-  },
-  {
-    "nazev": "Poselství prachu (Mistborn 4)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-4215-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/poselstvi-prachu-mistborn-615201"
-  },
-  {
-    "nazev": "Stíny self (Mistborn 5)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-5312-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stiny-self-mistborn-732048"
-  },
-  {
-    "nazev": "Pouta zuřivosti (Mistborn 6)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-5701-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pouta-zurivosti-mistborn-7901004"
-  },
-  {
-    "nazev": "Ztracený kov (Mistborn 7)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-8951-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ztraceny-kov-mistborn-7-511003442"
-  },
-  {
-    "nazev": "Hledání těla",
-    "autor": "Chris Carter",
-    "isbn": "978-80-7505-842-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/hledani-tela-296685861"
-  },
-  {
-    "nazev": "Ocelové srdce (Zúčtovatelé 1)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-4512-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ocelove-srdce-645012"
-  },
-  {
-    "nazev": "Ohnivák (Zúčtovatelé 2)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-5120-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ohnivak-715104"
-  },
-  {
-    "nazev": "Katastrofa (Zúčtovatelé 3)",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-5631-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/katastrofa-783204"
-  },
-  {
-    "nazev": "Výtah do oblak",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-6320-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vytah-do-oblak-1245032"
-  },
-  {
-    "nazev": "Vzhůru k obloze",
-    "autor": "Brandon Sanderson",
-    "isbn": "978-80-242-6541-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vzhuru-k-obloze-1542031"
-  },
-  {
-    "nazev": "Zákon azylu",
-    "autor": "Dan Wells",
-    "isbn": "978-80-257-3869-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/predprodej-zakon-azylu-378697839"
-  },
-  {
-    "nazev": "Caledorův meč (Sundering 1)",
-    "autor": "Gav Thorpe",
-    "isbn": "978-80-7174-991-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/caledoruv-mec-71861"
-  },
-  {
-    "nazev": "Aenarionova krev (Sundering 2)",
-    "autor": "Gav Thorpe",
-    "isbn": "978-80-7174-992-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/aenarionova-krev-17367"
-  },
-  {
-    "nazev": "Ve skrytu stínů",
-    "autor": "Ilona Andrews",
-    "isbn": "978-80-7595-314-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/ve-skrytu-stinu-391864434"
-  },
-  {
-    "nazev": "Hrad fantomů",
-    "autor": "Jonathan Stroud",
-    "isbn": "978-80-257-2384-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/hrad-fantomu-227842544"
-  },
-  {
-    "nazev": "Noční přísaha (Půlnoční kroniky 1)",
-    "autor": "Laura Kneidl, Bianca Iosivoni",
-    "isbn": "978-80-271-3142-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-nocni-prisaha-639990751"
-  },
-  {
-    "nazev": "Temný amulet (Půlnoční kroniky 3)",
-    "autor": "Laura Kneidl, Bianca Iosivoni",
-    "isbn": "978-80-271-3310-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-3-cerny-amulet-464263442"
-  },
-  {
-    "nazev": "Řeka času (Půlnoční kroniky 4)",
-    "autor": "Laura Kneidl, Bianca Iosivoni",
-    "isbn": "978-80-271-3422-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-4-reka-casu-508930064"
-  },
-  {
-    "nazev": "Odstín smrti (Půlnoční kroniky 5)",
-    "autor": "Laura Kneidl, Bianca Iosivoni",
-    "isbn": "978-80-271-3510-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-5-odstin-smrti-578251012"
-  },
-  {
-    "nazev": "Zničený",
-    "autor": "Michael R. Fletcher",
-    "isbn": "978-80-257-3551-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/zniceny-455125990"
-  },
-  {
-    "nazev": "Nabodnutý",
-    "autor": "Michael R. Fletcher",
-    "isbn": "978-80-257-3825-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nabodnuty-620143061"
-  },
-  {
-    "nazev": "Sto tisíc království",
-    "autor": "N. K. Jemisinová",
-    "isbn": "978-80-257-0482-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sto-tisic-kralovstvi-534753"
-  },
-  {
-    "nazev": "Projekt Kronos",
-    "autor": "Pavel Bareš",
-    "isbn": "978-80-257-2235-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/projekt-kronos-18483518"
-  },
-  {
-    "nazev": "Kronovy děti",
-    "autor": "Pavel Bareš",
-    "isbn": "978-80-257-2917-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/kronovy-deti-227843174"
-  },
-  {
-    "nazev": "Kronův odkaz",
-    "autor": "Pavel Bareš",
-    "isbn": "978-80-257-3475-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kronuv-odkaz-361214201"
-  },
-  {
-    "nazev": "Serafína – Dračí posel",
-    "autor": "Rachel Hartmanová",
-    "isbn": "978-80-242-4112-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/serafina-draci-posel-227838827"
-  },
-  {
-    "nazev": "Sirotčinec slečny Peregrinové: Ptačí sněm",
-    "autor": "Ransom Riggs",
-    "isbn": "978-80-242-6634-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sirotcinec-slecny-peregrinove-ptaci-snem-222020747"
-  },
-  {
-    "nazev": "Sirotčinec slečny Peregrinové: Zkáza Ďáblova akru",
-    "autor": "Ransom Riggs",
-    "isbn": "978-80-242-7362-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sirotcinec-slecny-peregrinove-zkaza-dablova-akru-362029520"
-  },
-  {
-    "nazev": "Mág: Učedník",
-    "autor": "Raymond E. Feist",
-    "isbn": "978-80-8053-080-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mag-ucednik-80530"
-  },
-  {
-    "nazev": "Mág: Mistr",
-    "autor": "Raymond E. Feist",
-    "isbn": "978-80-8053-081-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mag-mistr-80531"
-  },
-  {
-    "nazev": "Stříbrný trn",
-    "autor": "Raymond E. Feist",
-    "isbn": "978-80-8053-083-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stribrny-trn-trhlinove-valky-3-80393"
-  },
-  {
-    "nazev": "Čaroděj a syn",
-    "autor": "Raymond E. Feist",
-    "isbn": "978-80-257-4103-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/carodej-a-syn-651033308"
-  },
-  {
-    "nazev": "Hlasy v bouři",
-    "autor": "Robert McCammon",
-    "isbn": "978-80-7565-310-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hlasy-v-bouri-353102684"
-  },
-  {
-    "nazev": "Nové jaro (Kolo času Prequel)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-3460-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-prequel-nove-jaro-646081"
-  },
-  {
-    "nazev": "Kolo času 2: Velké hledání",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-5160-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/velke-hledani-516025522"
-  },
-  {
-    "nazev": "Kolo času 3: Drak Znovuzrozený",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-5543-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/kolo-casu-3-drak-znovuzrozeny-554328805"
-  },
-  {
-    "nazev": "Kolo času 4: Stín se šíří",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-5590-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-thin-se-siri-559031800"
-  },
-  {
-    "nazev": "Kolo času 5: Oheň z nebes",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-5591-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-ohen-z-nebes-559031964"
-  },
-  {
-    "nazev": "Pán chaosu (Kolo času 6)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-7165-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/pan-chaosu-716519365"
-  },
-  {
-    "nazev": "Koruna z mečů (Kolo času 7)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-7671-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/koruna-z-mecu-767170086"
-  },
-  {
-    "nazev": "Cesta nožů (Kolo času 8)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-6255-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-8-cesta-nozu-625503"
-  },
-  {
-    "nazev": "Srdce zimy (Kolo času 9)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-3638-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/srdce-zimy-227836383"
-  },
-  {
-    "nazev": "Křižovatky soumraku (Kolo času 10)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-3665-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/krizovatky-soumraku-227836657"
-  },
-  {
-    "nazev": "Nůž snů (Kolo času 11)",
-    "autor": "Robert Jordan",
-    "isbn": "978-80-242-3692-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/nuz-snu-227836923"
-  },
-  {
-    "nazev": "Bouře přichází (Kolo času 12)",
-    "autor": "Robert Jordan, Brandon Sanderson",
-    "isbn": "978-80-242-3723-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/boure-prichazi-227837236"
-  },
-  {
-    "nazev": "Věže půlnoci (Kolo času 13)",
-    "autor": "Robert Jordan, Brandon Sanderson",
-    "isbn": "978-80-242-3809-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-13-veze-pulnoci-7898091"
-  },
-  {
-    "nazev": "Vzpomínka na Světlo (Kolo času 14)",
-    "autor": "Robert Jordan, Brandon Sanderson",
-    "isbn": "978-80-242-4056-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/vzpominka-na-svetlo-227840562"
-  },
-  {
-    "nazev": "Zlá doba pro draky",
-    "autor": "Sergej Lukjaněnko",
-    "isbn": "978-80-257-0119-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zla-doba-pro-draky-40119"
-  },
-  {
-    "nazev": "Ďábel a temné vody",
-    "autor": "Stuart Turton",
-    "isbn": "978-80-7565-757-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dabel-a-temne-vody-355507570"
-  },
-  {
-    "nazev": "Dračí oči",
-    "autor": "Stephen King",
-    "isbn": "978-80-7381-124-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/draci-oci-329863512"
-  },
-  {
-    "nazev": "Trůn z dračích kostí",
-    "autor": "Tad Williams",
-    "isbn": "978-80-7193-217-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trun-z-dracich-kosti-21746"
-  },
-  {
-    "nazev": "Kámen rozluky",
-    "autor": "Tad Williams",
-    "isbn": "978-80-7193-225-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kamen-rozluky-103108426"
-  },
-  {
-    "nazev": "Věž zeleného anděla 1",
-    "autor": "Tad Williams",
-    "isbn": "978-80-7193-231-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vez-zeleneho-andela-1-cast-112633437"
-  },
-  {
-    "nazev": "Věž zeleného anděla 2",
-    "autor": "Tad Williams",
-    "isbn": "978-80-7193-232-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vez-zeleneho-andela-2-cast-123455842"
-  },
-  {
-    "nazev": "Shannarův meč",
-    "autor": "Terry Brooks",
-    "isbn": "978-80-7174-681-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/shannaruv-mec-668627"
-  },
-  {
-    "nazev": "Shannarovy elfeíny",
-    "autor": "Terry Brooks",
-    "isbn": "978-80-7174-722-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/shannarovy-magicke-elfeiny-672204"
-  },
-  {
-    "nazev": "Shannarova píseň přání",
-    "autor": "Terry Brooks",
-    "isbn": "978-80-7174-722-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/shannarova-pisen-prani-672203"
-  },
-  {
-    "nazev": "Velká kniha Zeměmoří",
-    "autor": "Ursula K. Le Guinová",
-    "isbn": "978-80-257-2706-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/velka-kniha-zememori-komplet-570681762"
-  },
-  {
-    "nazev": "Tajemství temného hvozdu",
-    "autor": "Vasilij Machaněnko",
-    "isbn": "978-80-7595-121-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tajemstvi-temneho-hvozdu-cesta-samana-3-111247184"
-  },
-  {
-    "nazev": "První pravidlo čaroděje (Meč pravdy 1)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-85843-16-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/prvni-pravidlo-carodeje-1262"
-  },
-  {
-    "nazev": "Kámen slz (Meč pravdy 2)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-85843-39-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kamen-slz-1234"
-  },
-  {
-    "nazev": "Krvavá lhostejnost (Meč pravdy 3)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-85843-63-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krvava-lhostejnost-1250"
-  },
-  {
-    "nazev": "Chrám větrů (Meč pravdy 4)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-004-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/chram-vetru-1241"
-  },
-  {
-    "nazev": "Duch ogně (Meč pravdy 5)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-033-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/duch-ohne-1244"
-  },
-  {
-    "nazev": "Víra poražených (Meč pravdy 6)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-070-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vira-porazenych-1267"
-  },
-  {
-    "nazev": "Pilíře světa (Meč pravdy 7)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-107-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/piliře-sveta-1260"
-  },
-  {
-    "nazev": "Nahé císařství (Meč pravdy 8)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-150-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nahe-cisarstvi-1254"
-  },
-  {
-    "nazev": "Čarodějův oheň (Meč pravdy 9)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-231-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/carodejuv-ohen-1242"
-  },
-  {
-    "nazev": "Přízračné dny (Meč pravdy 10)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-302-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/prizracne-dny-1261"
-  },
-  {
-    "nazev": "Zpovědnice (Meč pravdy 11)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-351-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zpovednice-1272"
-  },
-  {
-    "nazev": "Předtucha (Meč pravdy 12)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-538-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/predtucha-223456"
-  },
-  {
-    "nazev": "Třetí království (Meč pravdy 13)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-640-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/treti-kralovstvi-542158"
-  },
-  {
-    "nazev": "Oddělené duše (Meč pravdy 14)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-724-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/oddelene-duse-642103"
-  },
-  {
-    "nazev": "Válečné srdce (Meč pravdy 15)",
-    "autor": "Terry Goodkind",
-    "isbn": "978-80-7306-851-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/valecne-srdce-785412"
-  },
-  {
-    "nazev": "Označená (Škola noci 1)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-2624-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/oznacena-skola-noci-1-21691"
-  },
-  {
-    "nazev": "Zrazená (Škola noci 2)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-2693-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zrazena-skola-noci-2-21921"
-  },
-  {
-    "nazev": "Vyvolená (Škola noci 3)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-2845-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyvolena-skola-noci-3-22442"
-  },
-  {
-    "nazev": "Nezkrocená (Škola noci 4)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-2978-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nezkrocena-skola-noci-4-100234"
-  },
-  {
-    "nazev": "Pronásledovaná (Škola noci 5)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-3103-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pronasledovana-skola-noci-5-238412"
-  },
-  {
-    "nazev": "Pokoušená (Škola noci 6)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-3215-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pokousena-skola-noci-6-351024"
-  },
-  {
-    "nazev": "Vyhořelá (Škola noci 7)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-3365-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyhorela-skola-noci-7-410365"
-  },
-  {
-    "nazev": "Probuzená (Škola noci 8)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-3482-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/probuzena-skola-noci-8-524103"
-  },
-  {
-    "nazev": "Předurčená (Škola noci 9)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-3640-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/predurcena-skola-noci-9-635102"
-  },
-  {
-    "nazev": "Skrytá (Škola noci 10)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-3811-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skryta-skola-noci-10-741203"
-  },
-  {
-    "nazev": "Odhalená (Škola noci 11)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-4015-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/odhalena-skola-noci-11-851024"
-  },
-  {
-    "nazev": "Vykoupená (Škola noci 12)",
-    "autor": "P. C. Castová, Kristin Castová",
-    "isbn": "978-80-242-4265-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vykoupena-skola-noci-12-962014"
-  },
-  {
-    "nazev": "Eragon (Odkaz Dračích jezdců 1)",
-    "autor": "Christopher Paolini",
-    "isbn": "978-80-252-0111-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/eragon-640103"
-  },
-  {
-    "nazev": "Eldest (Odkaz Dračích jezdců 2)",
-    "autor": "Christopher Paolini",
-    "isbn": "978-80-252-0232-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/eldest-640104"
-  },
-  {
-    "nazev": "Brisingr (Odkaz Dračích jezdců 3)",
-    "autor": "Christopher Paolini",
-    "isbn": "978-80-252-1082-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/brisingr-640105"
-  },
-  {
-    "nazev": "Inheritance (Odkaz Dračích jezdců 4)",
-    "autor": "Christopher Paolini",
-    "isbn": "978-80-252-2158-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/inheritance-640106"
-  },
-  {
-    "nazev": "Poutník, čarodějnice a červ (Příběhy z Alagaësie)",
-    "autor": "Christopher Paolini",
-    "isbn": "978-80-252-4632-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/poutnik-carodejnice-a-cerv-1245089"
-  },
-  {
-    "nazev": "Murtagh",
-    "autor": "Christopher Paolini",
-    "isbn": "978-80-252-5812-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/murtagh-6124503"
-  },
-  {
-    "nazev": "Gideon Devátá (Zapečetěná hrobka 1)",
-    "autor": "Tamsyn Muir",
-    "isbn": "978-80-257-3315-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/gideon-devata-3241503"
-  },
-  {
-    "nazev": "Harrow Devátá (Zapečetěná hrobka 2)",
-    "autor": "Tamsyn Muir",
-    "isbn": "978-80-257-3682-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harrow-devata-4124035"
-  },
-  {
-    "nazev": "Nona Devátá (Zapečetěná hrobka 3)",
-    "autor": "Tamsyn Muir",
-    "isbn": "978-80-257-4112-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nona-devata-5124032"
-  },
-  {
-    "nazev": "Stříbro v listí (Kroniky liščího doupěte 1)",
-    "autor": "Katja Brandis",
-    "isbn": "978-80-242-7634-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stribro-v-listi-3245103"
-  },
-  {
-    "nazev": "Zlato v bažině (Kroniky liščího doupěte 2)",
-    "autor": "Katja Brandis",
-    "isbn": "978-80-242-8102-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zlato-v-bazine-4125032"
-  },
-  {
-    "nazev": "Země zaslíbená (Legenda o Drizztovi 1)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7174-842-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zeme-zaslibena-61024"
-  },
-  {
-    "nazev": "Vyhnanství (Legenda o Drizztovi 2)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7174-855-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyhnanstvi-61025"
-  },
-  {
-    "nazev": "Útočiště (Legenda o Drizztovi 3)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7174-889-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/utociste-61026"
-  },
-  {
-    "nazev": "Magický krystal (Legenda o Drizztovi 4)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7174-912-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/magicky-krystal-61027"
-  },
-  {
-    "nazev": "Stříbrné prameny (Legenda o Drizztovi 5)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7174-935-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stribrne-prameny-61028"
-  },
-  {
-    "nazev": "Spatření stínu (Legenda o Drizztovi 6)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7174-954-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/spatreni-stinu-61029"
-  },
-  {
-    "nazev": "Odkaz (Legenda o Drizztovi 7)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-015-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/odkaz-124502"
-  },
-  {
-    "nazev": "Bezhvězdná noc (Legenda o Drizztovi 8)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-042-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bezhvezdna-noc-124503"
-  },
-  {
-    "nazev": "Obéžení stínu (Legenda o Drizztovi 9)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-085-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/obezeni-stinu-124504"
-  },
-  {
-    "nazev": "Cesta k úsvitu (Legenda o Drizztovi 10)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-112-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cesta-k-usvitu-124505"
-  },
-  {
-    "nazev": "Tichá čepel (Legenda o Drizztovi 11)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-145-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ticha-cepel-124506"
-  },
-  {
-    "nazev": "Hřbet světa (Legenda o Drizztovi 12)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-189-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrbet-sveta-124507"
-  },
-  {
-    "nazev": "Služebník krystalu (Legenda o Drizztovi 13)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-215-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sluzebnik-krystalu-124508"
-  },
-  {
-    "nazev": "Meč mořeplavce (Legenda o Drizztovi 14)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-250-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-moreplavce-124509"
-  },
-  {
-    "nazev": "Tisíc pěstí (Legenda o Drizztovi 15)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-291-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tisic-pesti-124510"
-  },
-  {
-    "nazev": "Osamělý drow (Legenda o Drizztovi 16)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-320-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/osamely-drow-124511"
-  },
-  {
-    "nazev": "Dva meče (Legenda o Drizztovi 17)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-362-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dva-mece-124512"
-  },
-  {
-    "nazev": "Král orků (Legenda o Drizztovi 18)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-402-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kral-orku-124513"
-  },
-  {
-    "nazev": "Král pirátů (Legenda o Drizztovi 19)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-440-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kral-piratu-124514"
-  },
-  {
-    "nazev": "Král duchů (Legenda o Drizztovi 20)",
-    "autor": "R. A. Salvatore",
-    "isbn": "978-80-7306-482-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kral-duchu-124515"
-  },
-  {
-    "nazev": "Zaklínač I: Poslední přání",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-017-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-i-posledni-prani-broz-38435"
-  },
-  {
-    "nazev": "Zaklínač II: Meč osudu",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-023-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-ii-mec-osudu-broz-38437"
-  },
-  {
-    "nazev": "Zaklínač III: Krev elfů",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-030-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-iii-krev-elfu-broz-38438"
-  },
-  {
-    "nazev": "Zaklínač IV: Čas opovržení",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-035-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-iv-cas-opovrzeni-broz-38440"
-  },
-  {
-    "nazev": "Zaklínač V: Křest ohněm",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-042-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-v-krest-ohnem-broz-38441"
-  },
-  {
-    "nazev": "Zaklínač VI: Věž vlaštovky",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-048-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-vi-vez-vlastovky-broz-38442"
-  },
-  {
-    "nazev": "Zaklínač VII: Paní jezera",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-055-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-vii-pani-jezera-broz-38443"
-  },
-  {
-    "nazev": "Zaklínač VIII: Bouřková sezóna",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-062-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-bourkova-sezona-broz-38444"
-  },
-  {
-    "nazev": "Zaklínač: Zaklínačův meč",
-    "autor": "Andrzej Sapkowski",
-    "isbn": "978-80-7477-095-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinacuv-mec-1452031"
-  },
-  {
-    "nazev": "Smrtící vzdělání (Scholomance 1)",
-    "autor": "Naomi Noviková",
-    "isbn": "978-80-275-0682-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/smrtici-vzdelani-scholomance-kniha-prvni-345089324"
-  },
-  {
-    "nazev": "Poslední absolvent (Scholomance 2)",
-    "autor": "Naomi Noviková",
-    "isbn": "978-80-275-1150-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/posledni-absolvent-scholomance-kniha-druha-424103502"
-  },
-  {
-    "nazev": "Zlaté enklávy (Scholomance 3)",
-    "autor": "Naomi Noviková",
-    "isbn": "978-80-275-1542-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zlate-enklavy-scholomance-kniha-treti-512403590"
-  },
-  {
-    "nazev": "Zabíječ trollů (Gotrek & Felix 1)",
-    "autor": "William King",
-    "isbn": "978-80-86353-02-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-trollu-gotrek-felix-1-124503"
-  },
-  {
-    "nazev": "Zabíječ skavenů (Gotrek & Felix 2)",
-    "autor": "William King",
-    "isbn": "978-80-86353-06-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-skavenu-gotrek-felix-2-124504"
-  },
-  {
-    "nazev": "Zabíječ démonů (Gotrek & Felix 3)",
-    "autor": "William King",
-    "isbn": "978-80-86353-12-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-demonu-gotrek-felix-3-124505"
-  },
-  {
-    "nazev": "Zabíječ draků (Gotrek & Felix 4)",
-    "autor": "William King",
-    "isbn": "978-80-86353-24-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-draku-gotrek-felix-4-124506"
-  },
-  {
-    "nazev": "Zabíječbestií (Gotrek & Felix 5)",
-    "autor": "William King",
-    "isbn": "978-80-86353-35-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-bestii-gotrek-felix-5-124507"
-  },
-  {
-    "nazev": "Zabíječ upírů (Gotrek & Felix 6)",
-    "autor": "William King",
-    "isbn": "978-80-86353-48-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-upiru-gotrek-felix-6-124508"
-  },
-  {
-    "nazev": "Zabíječ obrů (Gotrek & Felix 7)",
-    "autor": "William King",
-    "isbn": "978-80-86353-62-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-obru-gotrek-felix-7-124509"
-  },
-  {
-    "nazev": "Zabíječ orků (Gotrek & Felix 8)",
-    "autor": "Nathan Long",
-    "isbn": "978-80-86353-85-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-orku-gotrek-felix-8-124510"
-  },
-  {
-    "nazev": "Zabíječ lidí (Gotrek & Felix 9)",
-    "autor": "Nathan Long",
-    "isbn": "978-80-87193-02-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-lidi-gotrek-felix-9-124511"
-  },
-  {
-    "nazev": "Zabíječ elfů (Gotrek & Felix 10)",
-    "autor": "Nathan Long",
-    "isbn": "978-80-87193-12-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-elfu-gotrek-felix-10-124512"
-  },
-  {
-    "nazev": "Zabíječ šamanů (Gotrek & Felix 11)",
-    "autor": "Nathan Long",
-    "isbn": "978-80-87193-22-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-samanu-gotrek-felix-11-124513"
-  },
-  {
-    "nazev": "Zabíječ zombivců (Gotrek & Felix 12)",
-    "autor": "Nathan Long",
-    "isbn": "978-80-87193-35-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zabijec-zombii-gotrek-felix-12-124514"
-  },
-  {
-    "nazev": "Ztracené legie (Cesty hrdinů 1)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-524-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/ztracene-legie-cesty-hrdinu-kniha-prvni-1245032"
-  },
-  {
-    "nazev": "Píseň rytíře (Cesty hrdinů 2)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-542-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/pisen-rytire-cesty-hrdinu-kniha-druha-1245035"
-  },
-  {
-    "nazev": "Okovy cti (Čarodějův prsten 1)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-011-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/cekani-na-hrdiny-carodejuv-prsten-kniha-1-534120"
-  },
-  {
-    "nazev": "Pochod králů (Čarodějův prsten 2)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-024-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/pochod-kralu-carodejuv-prsten-kniha-2-534121"
-  },
-  {
-    "nazev": "Osud draků (Čarodějův prsten 3)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-035-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/osud-draku-carodejuv-prsten-kniha-3-534122"
-  },
-  {
-    "nazev": "Pokřik cti (Čarodějův prsten 4)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-052-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/pokrik-cti-carodejuv-prsten-kniha-4-534123"
-  },
-  {
-    "nazev": "Slavnost zbraní (Čarodějův prsten 5)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-070-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/slavnost-zbrani-carodejuv-prsten-kniha-5-534124"
-  },
-  {
-    "nazev": "Útok hrdinů (Čarodějův prsten 6)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-092-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/utok-hrdinu-carodejuv-prsten-kniha-6-534125"
-  },
-  {
-    "nazev": "Obřad osudu (Čarodějův prsten 7)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-112-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/obrad-osudu-carodejuv-prsten-kniha-7-534126"
-  },
-  {
-    "nazev": "Dar zbraní (Čarodějův prsten 8)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-135-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/dar-zbrani-carodejuv-prsten-kniha-8-534127"
-  },
-  {
-    "nazev": "Noc šelem (Čarodějův prsten 9)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-152-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/noc-selem-carodejuv-prsten-kniha-9-534128"
-  },
-  {
-    "nazev": "Moře tyranů (Čarodějův prsten 10)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-175-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/more-tyranu-carodejuv-prsten-kniha-10-534129"
-  },
-  {
-    "nazev": "Země mrtvých (Cesta oceli 1)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-820-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/zeme-mrtvych-cesta-oceli-kniha-prvni-612453"
-  },
-  {
-    "nazev": "Země odsouzených (Cesta oceli 2)",
-    "autor": "Morgan Riceová",
-    "isbn": "978-1-63291-842-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/e-kniha/zeme-odsouzenych-cesta-oceli-kniha-druha-612454"
-  },
-  {
-    "nazev": "Vlčí bratr (Letopisy z hlubokých lesů 1)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-1432-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vlci-bratr-14320"
-  },
-  {
-    "nazev": "Toulavý duch (Letopisy z hlubokých lesů 2)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-1685-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/toulavy-duch-16850"
-  },
-  {
-    "nazev": "Pojídač lidí (Letopisy z hlubokých lesů 3)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-1922-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pojidac-lidi-19226"
-  },
-  {
-    "nazev": "Vyhnanec (Letopisy z hlubokých lesů 4)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-2210-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyhnanec-letopisy-z-hlubokych-lesu-iv-22103"
-  },
-  {
-    "nazev": "Zlomený slib (Letopisy z hlubokých lesů 5)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-2511-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zlomeny-slib-letopisy-z-hlubokych-lesu-v-25111"
-  },
-  {
-    "nazev": "Lovec duchů (Letopisy z hlubokých lesů 6)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-2810-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/lovec-duchu-letopisy-z-hlubokych-lesu-vi-28105"
-  },
-  {
-    "nazev": "Zmijí báchorka (Letopisy z hlubokých lesů 7)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-7210-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zmiji-bachorka-letopisy-z-hlubokych-lesu-7-352410"
-  },
-  {
-    "nazev": "Ostrov skinwalkerů (Letopisy z hlubokých lesů 8)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-8114-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ostrov-skinwalkeru-letopisy-z-hlubokych-lesu-8-412503"
-  },
-  {
-    "nazev": "Temný lovec (Letopisy z hlubokých lesů 9)",
-    "autor": "Michelle Paverová",
-    "isbn": "978-80-242-8890-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/temny-lovec-letopisy-z-hlubokych-lesu-9-512403"
-  },
-  {
-    "nazev": "První hrdina (Hrdinové z Olympu 1)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-1384-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrdinove-z-olympu-prvni-hrdina-32450"
-  },
-  {
-    "nazev": "Neptunův syn (Hrdinové z Olympu 2)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-1542-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrdinove-z-olympu-neptunuv-syn-41250"
-  },
-  {
-    "nazev": "Anatoliino znamení (Hrdinové z Olympu 3)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-1811-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrdinove-z-olympu-anatoliino-znameni-51240"
-  },
-  {
-    "nazev": "Hádův chrám (Hrdinové z Olympu 4)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-2114-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrdinove-z-olympu-haduv-chram-61240"
-  },
-  {
-    "nazev": "Krev polobohů (Hrdinové z Olympu 5)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-2415-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrdinove-z-olympu-krev-polobohu-71240"
-  },
-  {
-    "nazev": "Rudá pyramida (Kronika Cartera Kanea 1)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-1245-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kronika-cartera-kanea-ruda-pyramida-21542"
-  },
-  {
-    "nazev": "Hřímající trůn (Kronika Cartera Kanea 2)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-1422-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kronika-cartera-kanea-hrimajici-trun-31542"
-  },
-  {
-    "nazev": "Stín hada (Kronika Cartera Kanea 3)",
-    "autor": "Rick Riordan",
-    "isbn": "978-80-253-1610-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kronika-cartera-kanea-stin-hada-41542"
-  },
-  {
-    "nazev": "Prachmistři 1: Příslib krve",
-    "autor": "Brian McClellan",
-    "isbn": "978-80-7491-382-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/prislib-krve-prachmistri-kniha-i-641035"
-  },
-  {
-    "nazev": "Prachmistři 2: Krvavé tažení",
-    "autor": "Brian McClellan",
-    "isbn": "978-80-7491-540-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krvave-tazeni-prachmistri-kniha-ii-712405"
-  },
-  {
-    "nazev": "Prachmistři 3: Podzimní republika",
-    "autor": "Brian McClellan",
-    "isbn": "978-80-7491-710-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/podzimni-republika-prachmistri-kniha-iii-812405"
-  },
-  {
-    "nazev": "Zpěv krve (Stín krkavce 1)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7491-314-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zpev-krve-stin-krkavce-i-614032"
-  },
-  {
-    "nazev": "Pán věže (Stín krkavce 2)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7491-512-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pan-veze-stin-krkavce-ii-710243"
-  },
-  {
-    "nazev": "Královna ohně (Stín krkavce 3)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7491-722-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kralovna-ohne-stin-krkavce-iii-815402"
-  },
-  {
-    "nazev": "Píseň čepele (Čepel krkavce 1)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7637-082-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisen-cepele-cepel-krkavce-kniha-prvni-341502"
-  },
-  {
-    "nazev": "Černá píseň (Čepel krkavce 2)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7637-145-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cerna-pisen-cepel-krkavce-kniha-druha-412503"
-  },
-  {
-    "nazev": "Oheň probuzení (Draconis Memoria 1)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7491-912-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ohen-probuzeni-draconis-memoria-i-915420"
-  },
-  {
-    "nazev": "Legie plamene (Draconis Memoria 2)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7585-112-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/legie-plamene-draconis-memoria-ii-112450"
-  },
-  {
-    "nazev": "Impérium popela (Draconis Memoria 3)",
-    "autor": "Anthony Ryan",
-    "isbn": "978-80-7585-540-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/imperium-popela-draconis-memoria-iii-512450"
-  },
-  {
-    "nazev": "Parabellum",
-    "autor": "Dalibor Vácha",
-    "isbn": "978-80-257-3620-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/parabellum-4125036"
-  },
-  {
-    "nazev": "Smrtka (Žeň smrtek 1)",
-    "autor": "Neal Shusterman",
-    "isbn": "978-80-242-6115-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/smrtka-1245032"
-  },
-  {
-    "nazev": "Nimbus (Žeň smrtek 2)",
-    "autor": "Neal Shusterman",
-    "isbn": "978-80-242-6412-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nimbus-1542036"
-  },
-  {
-    "nazev": "Posel (Žeň smrtek 3)",
-    "autor": "Neal Shusterman",
-    "isbn": "978-80-242-6910-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/posel-2245012"
-  },
-  {
-    "nazev": "Klíč Spasení (Konec lidstva 1)",
-    "autor": "Karel Čapek",
-    "isbn": "978-80-7306-951-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/klic-spaseni-785412"
-  },
-  {
-    "nazev": "Země zaslíbená",
-    "autor": "František Kotleta",
-    "isbn": "978-80-7585-015-6",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zeme-zaslibena-12450"
-  },
-  {
-    "nazev": "Válka s mloky",
-    "autor": "Karel Čapek",
-    "isbn": "978-80-242-5110-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/valka-s-mloky-61402"
-  },
-  {
-    "nazev": "R.U.R.",
-    "autor": "Karel Čapek",
-    "isbn": "978-80-242-5420-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/rur-71240"
-  },
-  {
-    "nazev": "Bílá nemoc",
-    "autor": "Karel Čapek",
-    "isbn": "978-80-242-5630-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bila-nemoc-81540"
-  },
-  {
-    "nazev": "Krakatit",
-    "autor": "Karel Čapek",
-    "isbn": "978-80-242-5810-0",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krakatit-91245"
-  },
-  {
-    "nazev": "Továrna na absolutno",
-    "autor": "Karel Čapek",
-    "isbn": "978-80-242-6012-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tovarna-na-absolutno-11124"
-  },
-  {
-    "nazev": "Metropolis",
-    "autor": "Thea von Harbou",
-    "isbn": "978-80-257-3112-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/metropolis-312450"
-  },
-  {
-    "nazev": "Ocelové jeskyně (Elijáš Baley 1)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-0342-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ocelove-jeskyne-41250"
-  },
-  {
-    "nazev": "Nahé slunce (Elijáš Baley 2)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-0512-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nahe-slunce-51240"
-  },
-  {
-    "nazev": "Roboti úsvitu (Elijáš Baley 3)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-0710-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/roboti-usvitu-61245"
-  },
-  {
-    "nazev": "Roboti a impérium (Elijáš Baley 4)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-0912-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/roboti-a-imperium-71540"
-  },
-  {
-    "nazev": "Já, robot",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-1245-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ja-robot-91542"
-  },
-  {
-    "nazev": "Předehra k Nadaci (Nadace 1)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-1412-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/predehra-k-nadaci-112450"
-  },
-  {
-    "nazev": "A zrodí se Nadace (Nadace 2)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-1620-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/a-zrodi-se-nadace-132450"
-  },
-  {
-    "nazev": "Nadace (Nadace 3)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-1842-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-154210"
-  },
-  {
-    "nazev": "Nadace a Impérium (Nadace 4)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-2015-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-a-imperium-174512"
-  },
-  {
-    "nazev": "Druhá Nadace (Nadace 5)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-2210-9",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/druha-nadace-194512"
-  },
-  {
-    "nazev": "Na hranicích Nadace (Nadace 6)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-2415-8",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/na-hranicich-nadace-214512"
-  },
-  {
-    "nazev": "Nadace a Země (Nadace 7)",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-2630-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-a-zeme-234512"
-  },
-  {
-    "nazev": "Konec Věčnosti",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-2850-3",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/konec-vecnosti-254512"
-  },
-  {
-    "nazev": "Slepé stádium",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-3012-1",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/slepe-stadium-274512"
-  },
-  {
-    "nazev": "Ani sami bohové",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-3245-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ani-sami-bohove-294512"
-  },
-  {
-    "nazev": "Nemesis",
-    "autor": "Isaac Asimov",
-    "isbn": "978-80-257-3410-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nemesis-314512"
-  },
-  {
-    "nazev": "Bane",
-    "autor": "Drew Karpyshyn",
-    "isbn": "978-80-252-1112-2",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/star-wars-darth-bane-cesta-zkazy-11542"
-  },
-  {
-    "nazev": "Revan",
-    "autor": "Drew Karpyshyn",
-    "isbn": "978-80-252-1420-4",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/star-wars-the-old-republic-revan-31420"
-  },
-  {
-    "nazev": "Spasitel",
-    "autor": "Andy Weir",
-    "isbn": "978-80-242-7365-5",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/spasitel-3254102"
-  },
-  {
-    "nazev": "Artemis",
-    "autor": "Andy Weir",
-    "isbn": "978-80-242-5914-7",
-    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-1245032"
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/my-jsme-legie-57820354"
   },
   {
     "nazev": "Knihkupectví a kostní prach",
     "autor": "Travis Baldree",
-    "isbn": "978-80-242-9823-8",
     "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/knihkupectvi-a-kostni-prach-640500725"
   },
   {
     "nazev": "Banditi a břitmistři",
     "autor": "Travis Baldree",
-    "isbn": "978-80-284-0666-0",
     "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/banditi-a-britmistri-766657515"
   },
   {
     "nazev": "Prokletí Aurelie W.",
     "autor": "Avery Annaliese",
-    "isbn": "978-80-253-7683-6",
     "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/prokleti-aurelie-w-803230155"
   },
   {
     "nazev": "Legendy a latéčka",
     "autor": "Travis Baldree",
-    "isbn": "978-80-242-8945-8",
     "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/legendy-a-latecka-530357981"
   },
   {
     "nazev": "Zatmění",
     "autor": "Jo Nesbø",
-    "isbn": "978-80-7662-475-7",
     "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zatmeni-532346990"
   },
   {
-    "nazev": "Strážce mrtvých",
+    "nazev": "Strážce mrtvých - Pouť mrtvého 4",
     "autor": "Pavel Korněv",
-    "isbn": "978-80-7594-100-8",
     "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/strazce-mrtvych-pout-mrtveho-4-396611520"
+  },
+  {
+    "nazev": "Tanec papírových draků 2 - Hon",
+    "autor": "Petr Brožovský",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tanec-papirovych-draku-2-hon-538026074"
+  },
+  {
+    "nazev": "Tanec papírových draků",
+    "autor": "Petr Brožovský",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tanec-papirovych-draku-422739883"
+  },
+  {
+    "nazev": "Hraničářův učeň 17 - Arazanini vlci",
+    "autor": "John Flanagan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hranicaruv-ucen-kniha-sedmnacta-arazanini-vlci-803003217"
+  },
+  {
+    "nazev": "Hraničářův učeň 16 - Útěk z Falaise",
+    "autor": "John Flanagan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hranicaruv-ucen-kniha-sestnacta-utek-z-falaise-384423022"
+  },
+  {
+    "nazev": "Hraničářův učeň - Ztracený princ",
+    "autor": "John Flanagan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hranicaruv-ucen-ztraceny-princ-broz-422065057"
+  },
+  {
+    "nazev": "Počátek",
+    "autor": "Dan Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pocatek-803024206"
+  },
+  {
+    "nazev": "Inferno - ilustrovaná verze",
+    "autor": "Dan Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/inferno-ilustrovana-vydani-643546"
+  },
+  {
+    "nazev": "Ztracený symbol - speciální obrazové vydání",
+    "autor": "Dan Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ztraceny-symbol-specialni-obrazove-vydani-40053"
+  },
+  {
+    "nazev": "Digitální pevnost",
+    "autor": "Dan Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/digitalni-pevnost-39700"
+  },
+  {
+    "nazev": "Anatomie lži",
+    "autor": "Dan Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/anatomie-lzi-41435"
+  },
+  {
+    "nazev": "Andělé a démoni",
+    "autor": "Dan Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/andele-a-demoni-39461"
+  },
+  {
+    "nazev": "Harry Potter a tajemná komnata",
+    "autor": "J. K. Rowlingová",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-potter-a-tajemna-komnata-803034535"
+  },
+  {
+    "nazev": "Zaklínač I. - Poslední přání",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-i-posledni-prani-667076"
+  },
+  {
+    "nazev": "Zaklínač VIII. - Bouřková sezona",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-viii-bourkova-sezona-667075"
+  },
+  {
+    "nazev": "Zaklínač III - Krev elfů",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-iii-krev-elfu-538339686"
+  },
+  {
+    "nazev": "Zaklínač II - Meč osudu",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-ii-mec-osudu-682234"
+  },
+  {
+    "nazev": "Zaklínač IV - Čas opovržení",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-iv-cas-opovrzeni-22193561"
+  },
+  {
+    "nazev": "Eli",
+    "autor": "Bill Myers",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/eli-803300044"
+  },
+  {
+    "nazev": "Zaklínač V - Křest ohněm",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-v-krest-ohnem-34443385"
+  },
+  {
+    "nazev": "Zaklínač VII - Paní jezera",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-vii-pani-jezera-50900133"
+  },
+  {
+    "nazev": "Zaklínač VI - Věž vlaštovky",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-vi-vez-vlastovky-591340"
+  },
+  {
+    "nazev": "Agenti světla a temnoty",
+    "autor": "Simon R. Green",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/agenti-svetla-a-temnoty-78560"
+  },
+  {
+    "nazev": "Harry Potter a vězeň z Azkabanu",
+    "autor": "J. K. Rowlingová",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-potter-a-vezen-z-azkabanu-365339792"
+  },
+  {
+    "nazev": "Harry Potter a ohnivý pohár",
+    "autor": "J. K. Rowlingová",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-potter-a-ohnivy-pohar-333420610"
+  },
+  {
+    "nazev": "Harry Potter a Princ dvojí krve",
+    "autor": "J. K. Rowlingová",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-potter-a-princ-dvoji-krve-477485660"
+  },
+  {
+    "nazev": "Harry Potter a Fénixův řád",
+    "autor": "J. K. Rowlingová",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-potter-a-fenixuv-rad-465656814"
+  },
+  {
+    "nazev": "Dědictví krve",
+    "autor": "Neznámý",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dedictvi-krve-25048"
+  },
+  {
+    "nazev": "Setkání s Rámou",
+    "autor": "Arthur C. Clarke",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/setkani-s-ramou-469199250"
+  },
+  {
+    "nazev": "Kolo času - Oko světa",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-oko-sveta-469350917"
+  },
+  {
+    "nazev": "Děti Duny",
+    "autor": "Frank Herbert",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/deti-duny-352831902"
+  },
+  {
+    "nazev": "Spasitel",
+    "autor": "Frank Herbert",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/spasitel-363549795"
+  },
+  {
+    "nazev": "Dívka v ledu",
+    "autor": "Robert Bryndza",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/divka-v-ledu-4844999"
+  },
+  {
+    "nazev": "Násterea",
+    "autor": "Petra Stehlíková",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nasterea-298387490"
+  },
+  {
+    "nazev": "Naslouchač",
+    "autor": "Petra Stehlíková",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/naslouchac-669318"
+  },
+  {
+    "nazev": "Faja",
+    "autor": "Petra Stehlíková",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/faja-24375563"
+  },
+  {
+    "nazev": "Nemesis",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nemesis-453481618"
+  },
+  {
+    "nazev": "Pentagram",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pentagram-477486188"
+  },
+  {
+    "nazev": "Spasitel",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/spasitel-477485862"
+  },
+  {
+    "nazev": "Nůž",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nuz-473682675"
+  },
+  {
+    "nazev": "Žízeň",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zizen-7093183"
+  },
+  {
+    "nazev": "Levhart",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/levhart-453481619"
+  },
+  {
+    "nazev": "Policie",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/policie-453481617"
+  },
+  {
+    "nazev": "Červenka",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cervenka-473683875"
+  },
+  {
+    "nazev": "Švábi",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/svabi-353101719"
+  },
+  {
+    "nazev": "Sněhulák",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/snehulak-463861006"
+  },
+  {
+    "nazev": "Netopýr",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/netopyr-463861004"
+  },
+  {
+    "nazev": "Artemis",
+    "autor": "Andy Weir",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-479720189"
+  },
+  {
+    "nazev": "Marťan",
+    "autor": "Andy Weir",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/martan-699043608"
+  },
+  {
+    "nazev": "Těžké melodično",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tezke-melodicno-77959"
+  },
+  {
+    "nazev": "Buch!",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/buch-limitovana-sberatelska-edice-645705673"
+  },
+  {
+    "nazev": "Poslední kontinent",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/posledni-kontinent-limitovana-sberatelska-edice-530359793"
+  },
+  {
+    "nazev": "Soudné sestry",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/soudne-sestry-limitovana-sberatelska-edice-283373453"
+  },
+  {
+    "nazev": "Čarodějky na cestách",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/carodejky-na-cestach-limitovana-sberatelska-edice-392951179"
+  },
+  {
+    "nazev": "Pátý elefant",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/paty-elefant-limitovana-sberatelska-edice-530359792"
+  },
+  {
+    "nazev": "Stráže! Stráže!",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/straze-straze-limitovana-sberatelska-edice-392951107"
+  },
+  {
+    "nazev": "Hrrr na ně!",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrrr-na-ne-77927"
+  },
+  {
+    "nazev": "Muži ve zbrani",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/muzi-ve-zbrani-77936"
+  },
+  {
+    "nazev": "Noční hlídka",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nocni-hlidka-77940"
+  },
+  {
+    "nazev": "Nohy z jílu",
+    "autor": "Terry Pratchett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nohy-z-jilu-77941"
+  },
+  {
+    "nazev": "Šestá hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sesta-hlidka-18771244"
+  },
+  {
+    "nazev": "Nová hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nova-hlidka-81994"
+  },
+  {
+    "nazev": "Poslední hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/posledni-hlidka-43335"
+  },
+  {
+    "nazev": "Temná hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/temna-hlidka-48144"
+  },
+  {
+    "nazev": "Šerá hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sera-hlidka-7072441"
+  },
+  {
+    "nazev": "Denní hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/denni-hlidka-2305297"
+  },
+  {
+    "nazev": "Noční hlídka",
+    "autor": "Sergej Lukjaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nocni-hlidka-43337"
+  },
+  {
+    "nazev": "Zeměmoří 3 - Nejvzdálenější pobřeží",
+    "autor": "Ursula K. Le Guin",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zememori-3-nejvzdalenejsi-pobrezi-10725"
+  },
+  {
+    "nazev": "Zeměmoří 2 - Atuánské hrobky",
+    "autor": "Ursula K. Le Guin",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zememori-2-atuanske-hrobky-10722"
+  },
+  {
+    "nazev": "Zeměmoří 1 - Čaroděj Zeměmoří",
+    "autor": "Ursula K. Le Guin",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zememori-1-carodej-zememori-9289"
+  },
+  {
+    "nazev": "Metro 2033",
+    "autor": "Dmitrij Gluchovskij",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/metro-2033-417771748"
+  },
+  {
+    "nazev": "Učedník a válečný mág",
+    "autor": "Raymond E. Feist",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ucednik-a-valecny-mag-33946617"
+  },
+  {
+    "nazev": "Učedník a pyramida orků",
+    "autor": "Raymond E. Feist",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ucednik-a-pyramida-orku-1671884"
+  },
+  {
+    "nazev": "Učedník",
+    "autor": "Raymond E. Feist",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ucednik-666191"
+  },
+  {
+    "nazev": "Kodex Alera 2 - Akademův živel",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kodex-alera-2-akademuv-zivel-597516"
+  },
+  {
+    "nazev": "Kodex Alera 1 - Živly Calderonu",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kodex-alera-1-zivly-calderonu-82001"
+  },
+  {
+    "nazev": "Harry Dresden 10 - Drobná laskavost",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-10-drobna-laskavost-676353"
+  },
+  {
+    "nazev": "Harry Dresden 9 - Bílá noc",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-9-bila-noc-652472"
+  },
+  {
+    "nazev": "Harry Dresden 8 - Vinen",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-8-vinen-614791"
+  },
+  {
+    "nazev": "Harry Dresden 7 - V posledním tažení",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-7-v-poslednim-tazeni-598398"
+  },
+  {
+    "nazev": "Harry Dresden 6 - Oko zla",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-6-oko-zla-555684"
+  },
+  {
+    "nazev": "Harry Dresden 5 - Masky smrti",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-5-masky-smrti-88068"
+  },
+  {
+    "nazev": "Harry Dresden 4 - Letní rytíř",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-4-letni-rytir-8781"
+  },
+  {
+    "nazev": "Harry Dresden 3 - Temná hrozba",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-3-temna-hrozba-39478"
+  },
+  {
+    "nazev": "Harry Dresden 2 - Bláznivý úplněk",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-2-blaznivy-uplnek-20356"
+  },
+  {
+    "nazev": "Harry Dresden 1 - Bouřková fronta",
+    "autor": "Jim Butcher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/harry-dresden-1-bourkova-fronta-613544"
+  },
+  {
+    "nazev": "Inheritance",
+    "autor": "Christopher Paolini",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/inheritance-mekka-vazba-783314363"
+  },
+  {
+    "nazev": "Eldest",
+    "autor": "Christopher Paolini",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/eldest-mekka-vazba-787867044"
+  },
+  {
+    "nazev": "Eragon",
+    "autor": "Christopher Paolini",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/eragon-mekka-vazba-688092737"
+  },
+  {
+    "nazev": "Murtagh",
+    "autor": "Christopher Paolini",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/murtagh-exkluzivni-vydani-777177966"
+  },
+  {
+    "nazev": "Království mrtvých - Pouť mrtvého 2",
+    "autor": "Pavel Korněv",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kralovstvi-mrtvych-pout-mrtveho-2-234643719"
+  },
+  {
+    "nazev": "Mrtvý lotr - Pouť mrtvého 1",
+    "autor": "Pavel Korněv",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mrtvy-lotr-pout-mrtveho-1-229619728"
+  },
+  {
+    "nazev": "Zaklínač IX - Rozcestí krkavců",
+    "autor": "Andrzej Sapkowski",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zaklinac-ix-rozcesti-krkavcu-803009719"
+  },
+  {
+    "nazev": "Nespoutaní",
+    "autor": "John Gwynne",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nespoutani-699667594"
+  },
+  {
+    "nazev": "Čingischán",
+    "autor": "Conn Iggulden",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cingischan-46942"
+  },
+  {
+    "nazev": "Poslední jednorožec",
+    "autor": "Peter S. Beagle",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/posledni-jednorozec-629296315"
+  },
+  {
+    "nazev": "Nefritová válka",
+    "autor": "Fonda Lee",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nefritova-valka-635751527"
+  },
+  {
+    "nazev": "Nefritové město",
+    "autor": "Fonda Lee",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nefritove-mesto-411097919"
+  },
+  {
+    "nazev": "Jade Legacy",
+    "autor": "Fonda Lee",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/jade-legacy-386067382"
+  },
+  {
+    "nazev": "Piranesi",
+    "autor": "Susanna Clarke",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/piranesi-327897923"
+  },
+  {
+    "nazev": "Endymionův vzestup",
+    "autor": "Dan Simmons",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/endymionuv-vzestup-681562064"
+  },
+  {
+    "nazev": "Endymion",
+    "autor": "Dan Simmons",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/endymion-681562065"
+  },
+  {
+    "nazev": "Pád Hyperionu",
+    "autor": "Dan Simmons",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pad-hyperionu-114338840"
+  },
+  {
+    "nazev": "Hyperion",
+    "autor": "Dan Simmons",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hyperion-588601503"
+  },
+  {
+    "nazev": "Velká kniha Zeměmoří",
+    "autor": "Ursula K. Le Guin",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/velka-kniha-zememori-612035389"
+  },
+  {
+    "nazev": "Zelený jezdec",
+    "autor": "Kristen Britain",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zeleny-jezdec-87276"
+  },
+  {
+    "nazev": "Rudý úsvit",
+    "autor": "Pierce Brown",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/rudy-usvit-669127"
+  },
+  {
+    "nazev": "Temná hmota",
+    "autor": "Blake Crouch",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/temna-hmota-432526307"
+  },
+  {
+    "nazev": "Dvě pokroucené koruny",
+    "autor": "Rachel Gillig",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dve-pokroucene-koruny-789889722"
+  },
+  {
+    "nazev": "Jedno temné okno",
+    "autor": "Rachel Gillig",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/jedno-temne-okno-699092243"
+  },
+  {
+    "nazev": "Kopí protne vodu",
+    "autor": "Evan Winter",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kopi-protne-vodu-622322576"
+  },
+  {
+    "nazev": "Plameny pomsty",
+    "autor": "Evan Winter",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/plameny-pomsty-455525118"
+  },
+  {
+    "nazev": "Hněv draků",
+    "autor": "Evan Winter",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hnev-draku-423504733"
+  },
+  {
+    "nazev": "Černý jícen",
+    "autor": "Evan Winter",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cerny-jicen-574307686"
+  },
+  {
+    "nazev": "Císařství ticha",
+    "autor": "Christopher Ruocchio",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cisarstvi-ticha-707227223"
+  },
+  {
+    "nazev": "Ostré konce",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ostre-konce-89431662"
+  },
+  {
+    "nazev": "Rudá země",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ruda-zeme-598967"
+  },
+  {
+    "nazev": "Hrdinové",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hrdinove-80670"
+  },
+  {
+    "nazev": "Nejlépe chutná za studena",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nejlepe-chutna-za-studena-80416"
+  },
+  {
+    "nazev": "Poslední argument králů",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/posledni-argument-kralu-80302"
+  },
+  {
+    "nazev": "Až budou viset",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/az-budou-viset-prvni-zakon-kniha-druha-80212"
+  },
+  {
+    "nazev": "Sama čepel",
+    "autor": "Joe Abercrombie",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sama-cepel-prvni-zakon-kniha-prvni-79644"
+  },
+  {
+    "nazev": "Lži Lockeho Lamory",
+    "autor": "Scott Lynch",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/lzi-lockeho-lamory-515467579"
+  },
+  {
+    "nazev": "Malazská kniha 10 - Chromý bůh",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-10-chromy-buh-86843"
+  },
+  {
+    "nazev": "Malazská kniha 9 - Prach snů",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-9-prach-snu-10987"
+  },
+  {
+    "nazev": "Malazská kniha 8 - Daň pro ohaře",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-8-dan-pro-ohare-16475"
+  },
+  {
+    "nazev": "Malazská kniha 7 - Vichr smrti",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-7-vichr-smrti-21001"
+  },
+  {
+    "nazev": "Malazská kniha 6 - Lovci kostí",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-6-lovci-kosti-79920"
+  },
+  {
+    "nazev": "Malazská kniha 5 - Půlnoční vlny",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-5-pulnocni-vlny-78712"
+  },
+  {
+    "nazev": "Malazská kniha 4 - Dům řetězů",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-4-dom-retezu-77925"
+  },
+  {
+    "nazev": "Malazská kniha 3 - Vzpomínky ledu",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-3-vzpominky-ledu-79651"
+  },
+  {
+    "nazev": "Malazská kniha 2 - Dům mrtvých",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-2-dum-mrtvych-79538"
+  },
+  {
+    "nazev": "Měsíční zahrady",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mesicni-zahrady-422750308"
+  },
+  {
+    "nazev": "Malazská kniha 1 - Měsíční zahrady",
+    "autor": "Steven Erikson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malazska-kniha-1-mesicni-zahrady-79744"
+  },
+  {
+    "nazev": "Zrada v zimě",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zrada-v-zime-14161"
+  },
+  {
+    "nazev": "Stíny v létě",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stiny-v-lete-moderni-dila-fantasy-21725"
+  },
+  {
+    "nazev": "Smrt v domě Gillespieů",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/smrt-v-dome-gillespieu-627391722"
+  },
+  {
+    "nazev": "Nenasytní mrtví",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nenasytni-mrtvi-687530017"
+  },
+  {
+    "nazev": "Tajemství všech tajemství",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tajemstvi-vsech-tajemstvi-790064665"
+  },
+  {
+    "nazev": "Zápovězená země",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zapovezena-zeme-12854"
+  },
+  {
+    "nazev": "Návrat elfů",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/navrat-elfu-12917"
+  },
+  {
+    "nazev": "Stínové pomezí",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stinove-pomezi-31500"
+  },
+  {
+    "nazev": "Trůn z dračích kostí",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trun-z-dracich-kosti-79605595"
+  },
+  {
+    "nazev": "Měsíční kosti",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mesicni-kosti-79606392"
+  },
+  {
+    "nazev": "Uštvaný",
+    "autor": "Kevin Hearne",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ustvany-281849579"
+  },
+  {
+    "nazev": "Čarodějný přízrak",
+    "autor": "Kevin Hearne",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/carodejny-prizrak-295886302"
+  },
+  {
+    "nazev": "Koruna z čarodřeva 1. kniha",
+    "autor": "Kevin Hearne",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/koruna-z-carodreva-1-kniha-328228455"
+  },
+  {
+    "nazev": "Koruna z čarodřeva 2. kniha",
+    "autor": "Kevin Hearne",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/koruna-z-carodreva-2-kniha-334960570"
+  },
+  {
+    "nazev": "Tajná kapitola",
+    "autor": "Kevin Hearne",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tajna-kapitola-369461346"
+  },
+  {
+    "nazev": "Praví bastardi",
+    "autor": "Jonathan French",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pravi-bastardi-361625956"
+  },
+  {
+    "nazev": "Artemis Fowl: Poslední strážce",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-posledni-strazce-643068"
+  },
+  {
+    "nazev": "Artemis Fowl a atlantský komplex",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-a-atlantsky-komplex-83109"
+  },
+  {
+    "nazev": "Artemis Fowl a časový paradox",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-a-casovy-paradox-83107"
+  },
+  {
+    "nazev": "Artemis Fowl a ztracený ostrov",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-a-ztraceny-ostrov-569714"
+  },
+  {
+    "nazev": "Artemis Fowl: Opalin podraz",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-opalin-podraz-83108"
+  },
+  {
+    "nazev": "Artemis Fowl: Věčná šifra",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-vecna-sifra-561338"
+  },
+  {
+    "nazev": "Artemis Fowl: Operace Arktida",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/artemis-fowl-operace-arktida-34595"
+  },
+  {
+    "nazev": "Akta Fowl",
+    "autor": "Eoin Colfer",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/akta-fowl-568903"
+  },
+  {
+    "nazev": "Bajky barda Beedleho",
+    "autor": "J. K. Rowlingová",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bajky-barda-beedleho-473683888"
+  },
+  {
+    "nazev": "Cesta králů (Archiv bouřné záře 1)",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cesta-kralu-archiv-bourne-zare-1-36246"
+  },
+  {
+    "nazev": "Mluvčí za mrtvé",
+    "autor": "Orson Scott Card",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mluvci-za-mrtve-3-vyd-40650"
+  },
+  {
+    "nazev": "První setkání",
+    "autor": "Orson Scott Card",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/prvni-setkani-33688"
+  },
+  {
+    "nazev": "Děti ducha",
+    "autor": "Orson Scott Card",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/deti-ducha-40571"
+  },
+  {
+    "nazev": "Xenocida",
+    "autor": "Orson Scott Card",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/xenocida-80397"
+  },
+  {
+    "nazev": "Válka o dárky",
+    "autor": "Orson Scott Card",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/valka-o-darky-21731"
+  },
+  {
+    "nazev": "Ender ve vyhnanství",
+    "autor": "Orson Scott Card",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ender-ve-vyhnanstvi-18212"
+  },
+  {
+    "nazev": "Dishonored: Hrůza za závojem",
+    "autor": "Adam Christopher",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dishonored-hruza-za-zavojem-131130821"
+  },
+  {
+    "nazev": "Tamira 3: Královna věštců",
+    "autor": "Lynn Flewelling",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tamira-3-kralovna-vestcu-79427"
+  },
+  {
+    "nazev": "Skrytý válečník",
+    "autor": "Lynn Flewelling",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skryty-valecnik-30078"
+  },
+  {
+    "nazev": "Tamira 1: Dítě proroctví",
+    "autor": "Lynn Flewelling",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tamira-1-dite-proroctvi-30081"
+  },
+  {
+    "nazev": "Noční běžci 3: Zrádcův měsíc",
+    "autor": "Lynn Flewelling",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nocni-bezci-3-zradcuv-mesic-13108"
+  },
+  {
+    "nazev": "Krevní msta",
+    "autor": "Fonda Lee",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krevni-msta-411098065"
+  },
+  {
+    "nazev": "Dračí město",
+    "autor": "Genevieve Gornichec",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/draci-mesto-80301088"
+  },
+  {
+    "nazev": "Pouto stínů",
+    "autor": "Genevieve Gornichec",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pouto-stinu-164184436"
+  },
+  {
+    "nazev": "Přízraky domu Carrowů",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/prizraky-domu-carrowu-213760763"
+  },
+  {
+    "nazev": "Hořící stránka",
+    "autor": "Genevieve Cogman",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/horici-stranka-53326783"
+  },
+  {
+    "nazev": "Maskované město",
+    "autor": "Genevieve Cogman",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/maskovane-mesto-24127113"
+  },
+  {
+    "nazev": "Neviditelná knihovna",
+    "autor": "Genevieve Cogman",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/neviditelna-knihovna-6088457"
+  },
+  {
+    "nazev": "Impérium času",
+    "autor": "Genevieve Cogman",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/imperium-casu-69787965"
+  },
+  {
+    "nazev": "Strach moudrého muže (Kronika královraha 2)",
+    "autor": "Patrick Rothfuss",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/strach-moudreho-muze-kronika-kralovraha-2-660962"
+  },
+  {
+    "nazev": "Hudba ticha (Kronika královraha)",
+    "autor": "Patrick Rothfuss",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hudba-ticha-kronika-kralovraha-652399"
+  },
+  {
+    "nazev": "Kapitula: Duna",
+    "autor": "Frank Herbert",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kapitula-duna-452188610"
+  },
+  {
+    "nazev": "Kacíři duny",
+    "autor": "Frank Herbert",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kaciri-duny-613842"
+  },
+  {
+    "nazev": "Písky Duny",
+    "autor": "Brian Herbert, Kevin J. Anderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisky-duny-505198528"
+  },
+  {
+    "nazev": "Cesta k Duně",
+    "autor": "Frank Herbert",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cesta-k-dune-31478"
+  },
+  {
+    "nazev": "Píseční červi Duny",
+    "autor": "Brian Herbert, Kevin J. Anderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisecni-cervi-duny-505198428"
+  },
+  {
+    "nazev": "Rytmus války",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/rytmus-valky-483691968"
+  },
+  {
+    "nazev": "Bílý písek 3",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bily-pisek-3-247827018"
+  },
+  {
+    "nazev": "Bílý písek 2",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bily-pisek-2-227323983"
+  },
+  {
+    "nazev": "Bílý písek 1",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bily-pisek-1-215652510"
+  },
+  {
+    "nazev": "Kolo času 12: Bouře přichází",
+    "autor": "Robert Jordan, Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-12-boure-prichazi-671037"
+  },
+  {
+    "nazev": "Kolo času 11: Nůž snů",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-11-nuz-snu-663328"
+  },
+  {
+    "nazev": "Křižovatka soumraku 2",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krizovatka-soumraku-2-651033788"
+  },
+  {
+    "nazev": "Kolo času: Velké hledání",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-velke-hledani-469350916"
+  },
+  {
+    "nazev": "Ztracený kov",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ztraceny-kov-683707917"
+  },
+  {
+    "nazev": "Mistborn: Pouta dědictví",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mistborn-pouta-dedictvi-23101864"
+  },
+  {
+    "nazev": "Mistborn 2: Pramen povýšení",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mistborn-2-pramen-povyseni-21038"
+  },
+  {
+    "nazev": "Mistborn 1: Finální říše",
+    "autor": "Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mistborn-1-finalni-rise-79919"
+  },
+  {
+    "nazev": "Hlasy ze záhrobí",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hlasy-ze-zahrobi-663486"
+  },
+  {
+    "nazev": "Sen pro ducha",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sen-pro-ducha-553819"
+  },
+  {
+    "nazev": "Úsměv pro ducha",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/usmev-pro-ducha-80778"
+  },
+  {
+    "nazev": "Šance pro ducha",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sance-pro-ducha-80573"
+  },
+  {
+    "nazev": "Mistr písní",
+    "autor": "P. C. Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mistr-pisni-91398"
+  },
+  {
+    "nazev": "Předehra k Nadaci",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/predehra-k-nadaci-424375153"
+  },
+  {
+    "nazev": "Nadace a Země",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-a-zeme-424949142"
+  },
+  {
+    "nazev": "Na hranicích Nadace",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/na-hranicich-nadace-424949141"
+  },
+  {
+    "nazev": "Nadace 3 - Druhá Nadace",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-3-druha-nadace-40845"
+  },
+  {
+    "nazev": "Nadace 2 - Nadace a Říše",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-2-nadace-a-rise-42148"
+  },
+  {
+    "nazev": "Nadace",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nadace-175543458"
+  },
+  {
+    "nazev": "Přátelé Nadace",
+    "autor": "Martin H. Greenberg",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pratele-nadace-povidky-k-pocte-isaaca-asimova-647043"
+  },
+  {
+    "nazev": "A zrodí se Nadace",
+    "autor": "Isaac Asimov",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/a-zrodi-se-nadace-424949140"
+  },
+  {
+    "nazev": "Pán čarodějů",
+    "autor": "Terry Brooks",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pan-carodeju-261227415"
+  },
+  {
+    "nazev": "Elementum: Tajemství sudby",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/elementum-tajemstvi-sudby-101687385"
+  },
+  {
+    "nazev": "Ferálové 1: Pod křídly vran",
+    "autor": "Jacob Grey",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/feralove-1-pod-kridly-vran-668771"
+  },
+  {
+    "nazev": "Ferálové 2: Černý roj útočí",
+    "autor": "Jacob Grey",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/feralove-2-cerny-roj-utoci-2097587"
+  },
+  {
+    "nazev": "Ferálové: Pomsta bílé vdovy",
+    "autor": "Jacob Grey",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/feralove-pomsta-bile-vdovy-24375567"
+  },
+  {
+    "nazev": "Pozvání",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pozvani-213760756"
+  },
+  {
+    "nazev": "Trnitá řeč",
+    "autor": "Leigh Bardugo",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trnita-rec-103765311"
+  },
+  {
+    "nazev": "Zlo",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zlo-24493762"
+  },
+  {
+    "nazev": "Tulák",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tulak-669319"
+  },
+  {
+    "nazev": "Sedmá",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sedma-132859499"
+  },
+  {
+    "nazev": "Tisíciletý démon",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tisicilety-demon-99566561"
+  },
+  {
+    "nazev": "Ve stínu rudé věže: Purpurová noc 1",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ve-stinu-rude-veze-purpurova-noc-1-53498306"
+  },
+  {
+    "nazev": "Z vůle Luny",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/z-vule-luny-501794445"
+  },
+  {
+    "nazev": "Bojovnice Slunce",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bojovnice-slunce-518827366"
+  },
+  {
+    "nazev": "Škola noci: Lenobiin slib",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-lenobiin-slib-90345"
+  },
+  {
+    "nazev": "Škola noci: Drakova přísaha",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-drakova-prisaha-8948"
+  },
+  {
+    "nazev": "Škola noci: Neferetino prokletí",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-neferetino-prokleti-593290"
+  },
+  {
+    "nazev": "Škola noci 12: Vykoupená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-12-vykoupena-650514"
+  },
+  {
+    "nazev": "Škola noci 11: Odhalená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-11-odhalena-600825"
+  },
+  {
+    "nazev": "Škola noci 10: Skrytá",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-10-skryta-90101"
+  },
+  {
+    "nazev": "Škola noci 9: Předurčená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-9-predurcena-73861"
+  },
+  {
+    "nazev": "Škola noci 8: Probuzená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-8-probuzena-10873"
+  },
+  {
+    "nazev": "Škola noci 7: Vyhořelá",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-7-vyhorela-13935"
+  },
+  {
+    "nazev": "Škola noci 6: Pokoušená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-6-pokousena-15459"
+  },
+  {
+    "nazev": "Škola noci 5: Pronásledovaná",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-5-pronasledovana-16602"
+  },
+  {
+    "nazev": "Škola noci 3: Vyvolená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-3-vyvolena-20235"
+  },
+  {
+    "nazev": "Škola noci 2: Zrazená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-2-zrazena-21070"
+  },
+  {
+    "nazev": "Škola noci 1: Označená",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skola-noci-1-oznacena-21716"
+  },
+  {
+    "nazev": "Kalonův pád (Škola noci)",
+    "autor": "P. C. Cast, Kristin Cast",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kalonuv-pad-skola-noci-643321"
+  },
+  {
+    "nazev": "Warhammer: Caledorův meč",
+    "autor": "William King",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/warhammer-caledoruv-mec-206414512"
+  },
+  {
+    "nazev": "Warhammer: Aenarionova krev",
+    "autor": "William King",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/warhammer-aenarionova-krev-183294011"
+  },
+  {
+    "nazev": "Malekithova zkáza",
+    "autor": "William King",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/malekithova-zkaza-268376613"
+  },
+  {
+    "nazev": "Kroniky deštné divočiny: Dračí město",
+    "autor": "Robin Hobb",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kroniky-destne-divociny-draci-mesto-252306061"
+  },
+  {
+    "nazev": "Kroniky deštné divočiny: Dračí strážce",
+    "autor": "Robin Hobb",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kroniky-destne-divociny-draci-strazce-108476569"
+  },
+  {
+    "nazev": "Kroniky deštné divočiny: Dračí domov",
+    "autor": "Robin Hobb",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kroniky-destne-divociny-draci-domov-190565974"
+  },
+  {
+    "nazev": "Bohové krve a prachu 3: Krev říše",
+    "autor": "Brian McClellan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bohove-krve-a-prachu-3-krev-rise-297242097"
+  },
+  {
+    "nazev": "Nepřítel živých (Pouť mrtvého 5)",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nepritel-zivych-pout-mrtveho-5-430788846"
+  },
+  {
+    "nazev": "Družina mrtvého",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/druzina-mrtveho-243384005"
+  },
+  {
+    "nazev": "Svatá sestra",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/svata-sestra-315318638"
+  },
+  {
+    "nazev": "Šedá sestra",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/seda-sestra-227323984"
+  },
+  {
+    "nazev": "Bratři na cestách",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/bratri-na-cestach-135004589"
+  },
+  {
+    "nazev": "Trnový císař",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trnovy-cisar-680731"
+  },
+  {
+    "nazev": "Trnový král",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trnovy-kral-648361"
+  },
+  {
+    "nazev": "Trnový princ",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trnovy-princ-87239"
+  },
+  {
+    "nazev": "Příliv démonů",
+    "autor": "Peter V. Brett",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/priliv-demonu-565264340"
+  },
+  {
+    "nazev": "Květ železného stromu",
+    "autor": "Gail Carriger",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kvet-zelezneho-stromu-257660822"
+  },
+  {
+    "nazev": "Černá čarodějnice",
+    "autor": "Laurie Forest",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cerna-carodejnice-53498312"
+  },
+  {
+    "nazev": "Vyvolený (Alex Verus 4)",
+    "autor": "Benedict Jacka",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vyvoleny-alex-verus-4-430788844"
+  },
+  {
+    "nazev": "Skrytý (Alex Verus 5)",
+    "autor": "Benedict Jacka",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skryty-alex-verus-5-530822644"
+  },
+  {
+    "nazev": "Předurčený (Alex Verus 1)",
+    "autor": "Benedict Jacka",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/predurceny-alex-verus-1-220935565"
+  },
+  {
+    "nazev": "Zrcadlová říše",
+    "autor": "Kameron Hurley",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zrcadlova-rise-3754131"
+  },
+  {
+    "nazev": "Zarua: Ztracené město",
+    "autor": "M. L. Wang",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zarua-ztracene-mesto-183526103"
+  },
+  {
+    "nazev": "Magnus Chase a bohové Ásgardu: Thorovo kladivo",
+    "autor": "Rick Riordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/magnus-chase-a-bohove-asgardu-thorovo-kladivo-25670031"
+  },
+  {
+    "nazev": "Magnus Chase a bohové Ásgardu: Prastarý meč",
+    "autor": "Rick Riordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/magnus-chase-a-bohove-asgardu-prastary-mec-1216416"
+  },
+  {
+    "nazev": "Magnus Chase a bohové Ásgardu: Loď mrtvých",
+    "autor": "Rick Riordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/magnus-chase-a-bohove-asgardu-lod-mrtvych-88247588"
+  },
+  {
+    "nazev": "Meč pravdy 15: Válečná srdce",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-15-valecna-srdce-1742008"
+  },
+  {
+    "nazev": "Meč pravdy 14: Oddělené duše",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-14-oddelene-duse-724778028"
+  },
+  {
+    "nazev": "Meč pravdy 13: Třetí království",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-13-treti-kralovstvi-643021"
+  },
+  {
+    "nazev": "Meč pravdy 10: Fantom",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-10-fantom-599750"
+  },
+  {
+    "nazev": "Meč pravdy 9: Ohnivá kaskáda",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-9-ohniva-kaskada-598392"
+  },
+  {
+    "nazev": "Meč pravdy 8: Obnažená říše",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-8-obnazena-rise-596055"
+  },
+  {
+    "nazev": "Meč pravdy 7: Pilíře světa",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-7-pilire-sveta-535974"
+  },
+  {
+    "nazev": "Meč pravdy 6: Víra poražených",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-6-vira-porazenych-87744"
+  },
+  {
+    "nazev": "Meč pravdy 5: Duch ohně",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-5-duch-ohne-75523"
+  },
+  {
+    "nazev": "Meč pravdy: Chrám větrů",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-chram-vetru-7763765"
+  },
+  {
+    "nazev": "Meč pravdy 3: Krvavá církev",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-3-krvava-cirkev-13016"
+  },
+  {
+    "nazev": "Meč pravdy 3: Krvavá církev (alternativní vydání)",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-3-krvava-cirkev-202089447"
+  },
+  {
+    "nazev": "Meč pravdy 2: Kámen slz",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-2-kamen-slz-46729545"
+  },
+  {
+    "nazev": "Meč pravdy 1: První čarodějovo pravidlo",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-1-prvni-carodejovo-pravidlo-82565"
+  },
+  {
+    "nazev": "Meč pravdy 11: Zpovědnice",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mec-pravdy-11-zpovednice-654732"
+  },
+  {
+    "nazev": "Ozubí Reguly",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/ozubi-reguly-broz-595453"
+  },
+  {
+    "nazev": "Pánův tajemný odkaz: Dračí proroctví",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/panuv-tajemny-odkaz-draci-proroctvi-14746806"
+  },
+  {
+    "nazev": "Pánův tajemný odkaz: Ztracené insignie",
+    "autor": "Terry Goodkind",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/panuv-tajemny-odkaz-ztracene-insignie-29275926"
+  },
+  {
+    "nazev": "Lhářův klíč",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/lharuv-klic-25616025"
+  },
+  {
+    "nazev": "Princ bláznů",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/princ-blaznu-3753921"
+  },
+  {
+    "nazev": "Osheimské kolo",
+    "autor": "Mark Lawrence",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/osheimske-kolo-59348737"
+  },
+  {
+    "nazev": "Zajatec železné hory",
+    "autor": "Dennis E. Taylor",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zajatec-zelezne-hory-94144491"
+  },
+  {
+    "nazev": "Protože je nás mnoho",
+    "autor": "Dennis E. Taylor",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/protoze-je-nas-mnoho-82246644"
+  },
+  {
+    "nazev": "Všechny tyto světy",
+    "autor": "Dennis E. Taylor",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vsechny-tyto-svety-162615549"
+  },
+  {
+    "nazev": "Cesta šamana 5: Kardamontova šachovnice",
+    "autor": "Vasilij Machaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/cesta-samana-5-kardamontova-sachovnice-157103143"
+  },
+  {
+    "nazev": "Tajemství temného hvozdu (Cesta šamana 3)",
+    "autor": "Vasilij Machaněnko",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/tajemstvi-temneho-hvozdu-cesta-samana-3-111247184"
+  },
+  {
+    "nazev": "Kronův odkaz",
+    "autor": "Juraj Červenák",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kronuv-odkaz-361214201"
+  },
+  {
+    "nazev": "Projekt Kronos",
+    "autor": "George Saunders",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/projekt-kronos-18483518"
+  },
+  {
+    "nazev": "Shannarův meč",
+    "autor": "Terry Brooks",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/shannaruv-mec-668627"
+  },
+  {
+    "nazev": "Shannarovy magické elfeiny",
+    "autor": "Terry Brooks",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/shannarovy-magicke-elfeiny-672204"
+  },
+  {
+    "nazev": "Shannarova píseň přání",
+    "autor": "Terry Brooks",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/shannarova-pisen-prani-672203"
+  },
+  {
+    "nazev": "Letopisy dračích jezdců",
+    "autor": "Christopher Paolini",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/letopisy-dracich-jezdcu-238977178"
+  },
+  {
+    "nazev": "Věž zeleného anděla (1. část)",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vez-zeleneho-andela-1-cast-112633437"
+  },
+  {
+    "nazev": "Kámen rozluky",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kamen-rozluky-103108426"
+  },
+  {
+    "nazev": "Trůn z dračích kostí",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/trun-z-dracich-kosti-21746"
+  },
+  {
+    "nazev": "Věž zeleného anděla (2. část)",
+    "autor": "Tad Williams",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/vez-zeleneho-andela-2-cast-123455842"
+  },
+  {
+    "nazev": "Sto tisíc království",
+    "autor": "N. K. Jemisin",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sto-tisic-kralovstvi-534753"
+  },
+  {
+    "nazev": "Ďábel a temné vody",
+    "autor": "Stuart Turton",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dabel-a-temne-vody-355507570"
+  },
+  {
+    "nazev": "Hlasy v bouři",
+    "autor": "Stuart Turton",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/hlasy-v-bouri-353102684"
+  },
+  {
+    "nazev": "Dračí oči",
+    "autor": "Stephen King",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/draci-oci-329863512"
+  },
+  {
+    "nazev": "Dům tajemných stínů",
+    "autor": "Darcy Coates",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/dum-tajemnych-stinu-466344875"
+  },
+  {
+    "nazev": "Krev dvojčat: Kouzlo elfů",
+    "autor": "Nalini Singh",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/krev-dvojcat-kouzlo-elfu-429727721"
+  },
+  {
+    "nazev": "Půlnoční kroniky: Noční přísaha",
+    "autor": "Laura Kneidl",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-nocni-prisaha-639990751"
+  },
+  {
+    "nazev": "Půlnoční kroniky 5: Odstín smrti",
+    "autor": "Laura Kneidl",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-5-odstin-smrti-578251012"
+  },
+  {
+    "nazev": "Půlnoční kroniky 4: Řeka času",
+    "autor": "Laura Kneidl",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-4-reka-casu-508930064"
+  },
+  {
+    "nazev": "Půlnoční kroniky 3: Černý amulet",
+    "autor": "Laura Kneidl",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pulnocni-kroniky-3-cerny-amulet-464263442"
+  },
+  {
+    "nazev": "Mág: Učedník",
+    "autor": "Raymond E. Feist",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mag-ucednik-80530"
+  },
+  {
+    "nazev": "Mág: Mistr",
+    "autor": "Raymond E. Feist",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/mag-mistr-80531"
+  },
+  {
+    "nazev": "Stříbrný trn (Trhlinové války 3)",
+    "autor": "Raymond E. Feist",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/stribrny-trn-trhlinove-valky-3-80393"
+  },
+  {
+    "nazev": "Čaroděj a syn",
+    "autor": "Charles Butler",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/carodej-a-syn-651033308"
+  },
+  {
+    "nazev": "Zlá doba pro draky",
+    "autor": "Roger Zelazny",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/zla-doba-pro-draky-40119"
+  },
+  {
+    "nazev": "Skandar a přízračný jezdec",
+    "autor": "A. F. Steadman",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skandar-a-prizracny-jezdec-521607820"
+  },
+  {
+    "nazev": "Skandar a zloděj jednorožců",
+    "autor": "A. F. Steadman",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/skandar-a-zlodej-jednorozcu-410816110"
+  },
+  {
+    "nazev": "Píseň války",
+    "autor": "Evan Winter",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisen-valky-501331052"
+  },
+  {
+    "nazev": "Píseň severu",
+    "autor": "Evan Winter",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/pisen-severu-327753772"
+  },
+  {
+    "nazev": "Konec dětství",
+    "autor": "Arthur C. Clarke",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/konec-detstvi-496498448"
+  },
+  {
+    "nazev": "Nikdynoc",
+    "autor": "Jay Kristoff",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nikdynoc-422030314"
+  },
+  {
+    "nazev": "Protivníci",
+    "autor": "Amie Kaufman, Jay Kristoff",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/protivnici-156225933"
+  },
+  {
+    "nazev": "Aurora povstává",
+    "autor": "Amie Kaufman, Jay Kristoff",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/aurora-povstava-259341715"
+  },
+  {
+    "nazev": "Aurora hasne",
+    "autor": "Amie Kaufman, Jay Kristoff",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/aurora-hasne-473684286"
+  },
+  {
+    "nazev": "Nabodnutý",
+    "autor": "Christopher Moore",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/nabodnuty-620143061"
+  },
+  {
+    "nazev": "Syn",
+    "autor": "Jo Nesbø",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/syn-473683877"
+  },
+  {
+    "nazev": "Sirotčinec slečny Peregrinové: Ptačí sněm",
+    "autor": "Ransom Riggs",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sirotcinec-slecny-peregrinove-ptaci-snem-222020747"
+  },
+  {
+    "nazev": "Sirotčinec slečny Peregrinové: Zkáza Ďáblova akru",
+    "autor": "Ransom Riggs",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/sirotcinec-slecny-peregrinove-zkaza-dablova-akru-362029520"
+  },
+  {
+    "nazev": "Kolo času 13: Věže půlnoci",
+    "autor": "Robert Jordan, Brandon Sanderson",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-13-veze-pulnoci-7898091"
+  },
+  {
+    "nazev": "Kolo času 8: Cesta nožů",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-8-cesta-nozu-625503"
+  },
+  {
+    "nazev": "Kolo času (prequel): Nové jaro",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-prequel-nove-jaro-646081"
+  },
+  {
+    "nazev": "Kolo času: Stín se šíří",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-stin-se-siri-559031800"
+  },
+  {
+    "nazev": "Kolo času 6: Pán chaosu",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-6-pan-chaosu-101514436"
+  },
+  {
+    "nazev": "Kolo času: Oheň z nebes",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-ohen-z-nebes-559031964"
+  },
+  {
+    "nazev": "Kolo času: Koruna mečů",
+    "autor": "Robert Jordan",
+    "dobrovskyUrl": "https://www.knihydobrovsky.cz/kniha/kolo-casu-koruna-mecu-731242188"
   }
 ]
